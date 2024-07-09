@@ -1,11 +1,10 @@
 import { Image } from '@chakra-ui/image';
-import React from 'react'
-import {Box,useColorModeValue,VStack,Text,AspectRatio,HStack,Tag,Icon,useDisclosure,Modal,ModalOverlay,ModalContent,ModalBody,Center,Flex,Tooltip,Container,SimpleGrid, Button} from '@chakra-ui/react';
+import { AspectRatio, Box, Button, Container, Flex, HStack, Icon, SimpleGrid, Tag, Text, Tooltip, VStack, useColorModeValue } from '@chakra-ui/react';
+import React from 'react';
 import { AiOutlineStar } from 'react-icons/ai';
+import { BsFillRecordFill } from 'react-icons/bs';
 import { FiGithub } from 'react-icons/fi';
 import coursify from "../src/assets/01_coursify.png";
-import { Link } from 'react-router-dom';
-import { BsFillRecordFill } from 'react-icons/bs';
 
 const Projects = () => {
   const projectsList = [{
@@ -72,11 +71,6 @@ const LazyImage = (props) => {
 
 const ProjectCard = (props) => {
   const { title,description, cover, techStack, url, stargazers_count, live } = props;
-  const { isOpen, onOpen, onClose } = useDisclosure();
-
-  const handleClick = () => {
-    onOpen();
-  };
 
   const handleLinkClick = (e, link) => {
     window.open(link);
@@ -84,7 +78,7 @@ const ProjectCard = (props) => {
   };
 
   return (
-    <Box onClick={handleClick} cursor="pointer" size="xl">
+    <Box cursor="pointer" size="xl">
       <VStack
         rounded="xl"
         bg={'#25282c'}
@@ -146,16 +140,6 @@ const ProjectCard = (props) => {
           <Button mt={4} border={'1px solid black'} background={'black'} color={'white'} size={'sm'} onClick={e => handleLinkClick(e, live)} gap={2} _hover={{border: '1px solid red'}}>Live <BsFillRecordFill color='red' /> </Button>
         </VStack>
       </VStack>
-      <Modal isOpen={isOpen} onClose={onClose} isCentered allowPinchZoom>
-        <ModalOverlay />
-        <ModalContent bg="none" maxW="28rem" w="auto">
-          <ModalBody p={0} rounded="lg" overflow="hidden" bg="none">
-            <Center>
-              <Image src={cover} rounded="lg" alt="Repo image" />
-            </Center>
-          </ModalBody>
-        </ModalContent>
-      </Modal>
     </Box>
   );
 };
