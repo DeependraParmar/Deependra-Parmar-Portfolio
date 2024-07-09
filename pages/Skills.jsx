@@ -3,7 +3,7 @@ import React from 'react'
 const Skills = () => {
   return (
     <div>
-      Hey there, this is my about page
+      Hey there, this is my skills page
     </div>
   )
 }

@@ -1,9 +1,18 @@
+import { Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react'
 import React from 'react'
-import Sidebar from '../components/Sidebar'
 import ContentBox from '../components/ContentBox'
 import MainWrapper from '../components/MainWrapper'
-import { Tabs, TabList, TabPanels, Tab, TabPanel, Divider } from '@chakra-ui/react'
-import { Link } from 'react-router-dom'
+import Sidebar from '../components/Sidebar'
+import About from './About'
+import Achievements from './Achievements'
+import Certifications from './Certifications'
+import CodingProfiles from './CodingProfiles'
+import Contact from './Contact'
+import Education from './Education'
+import MyPassion from './MyPassion'
+import Projects from './Projects'
+import Skills from './Skills'
+
 
 const Home = () => {
   return (
