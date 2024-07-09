@@ -1,9 +1,11 @@
 import { Image } from '@chakra-ui/image';
 import React from 'react'
-import {Box,useColorModeValue,VStack,Text,AspectRatio,HStack,Tag,Icon,useDisclosure,Modal,ModalOverlay,ModalContent,ModalBody,Center,Flex,Tooltip,Container,SimpleGrid} from '@chakra-ui/react';
+import {Box,useColorModeValue,VStack,Text,AspectRatio,HStack,Tag,Icon,useDisclosure,Modal,ModalOverlay,ModalContent,ModalBody,Center,Flex,Tooltip,Container,SimpleGrid, Button} from '@chakra-ui/react';
 import { AiOutlineStar } from 'react-icons/ai';
 import { FiGithub } from 'react-icons/fi';
 import coursify from "../src/assets/01_coursify.png";
+import { Link } from 'react-router-dom';
+import { BsFillRecordFill } from 'react-icons/bs';
 
 const Projects = () => {
   const projectsList = [{
@@ -31,8 +33,8 @@ const Projects = () => {
   ];
 
   return (
-    <Container maxW="7xl" p="5" mx="auto">
-      <SimpleGrid columns={[1, 2]} spacing={4} mt={8}>
+    <Container maxW="7xl" mx="auto">
+      <SimpleGrid columns={[1, 3]} spacing={4} mt={4}>
         {projectsList.map((project, index) => (
           <ProjectCard
             key={index}
@@ -42,6 +44,7 @@ const Projects = () => {
             techStack={project.techStack}
             url={project.url}
             stargazers_count={project.stargazers_count}
+            live={project.live}
           />
         ))}
       </SimpleGrid>
@@ -68,7 +71,7 @@ const LazyImage = (props) => {
 };
 
 const ProjectCard = (props) => {
-  const { title,description, cover, techStack, url, stargazers_count } = props;
+  const { title,description, cover, techStack, url, stargazers_count, live } = props;
   const { isOpen, onOpen, onClose } = useDisclosure();
 
   const handleClick = () => {
@@ -103,7 +106,7 @@ const ProjectCard = (props) => {
           </AspectRatio>
         </Box>
 
-        <VStack py={2} px={[2, 4]} spacing={1} align="start" w="100%">
+        <VStack py={2} px={[2, 4]} spacing={2} align="start" w="100%">
           <Flex justifyContent="space-between" width="100%">
             <Tooltip hasArrow label="Github link" placement="top">
               <HStack>
@@ -139,6 +142,8 @@ const ProjectCard = (props) => {
               </HStack>
             </Box>
           </Flex>
+
+          <Button mt={4} border={'1px solid black'} background={'black'} color={'white'} size={'sm'} onClick={e => handleLinkClick(e, live)} gap={2} _hover={{border: '1px solid red'}}>Live <BsFillRecordFill color='red' /> </Button>
         </VStack>
       </VStack>
       <Modal isOpen={isOpen} onClose={onClose} isCentered allowPinchZoom>
