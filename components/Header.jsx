@@ -9,7 +9,7 @@ const Header = () => {
             <Link to={'/'}>
                 <HStack>
                     <IoDiamondOutline color='gold' size={'18'} />
-                    <Heading fontFamily={'Sofia'} fontSize={['md','md','xl','xl']}>Deependra Parmar</Heading>
+                    <Heading fontFamily={'Sofia'} fontSize={['sm','md','xl','xl']}>Deependra Parmar</Heading>
                 </HStack>
             </Link>
             <HStack gap={2}>
