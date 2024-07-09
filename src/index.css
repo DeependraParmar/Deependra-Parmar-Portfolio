@@ -21,3 +21,28 @@ body,
         padding-left: 5px;
     }
 }
+
+[role=tab]{
+    font-size: 0.8rem !important;
+    color: rgb(193, 193, 193) !important;
+}
+[role=tab]:hover{
+    color: white !important;
+    background-color: gray;
+}
+
+[aria-selected=true]{
+    color: white !important;
+    background-color: #5f5dff !important;
+}
+
+.chakra-tabs__tablist{
+    overflow-x: auto !important;
+    width: 100% !important;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(54, 54, 54);
+}
+.chakra-tabs__tab{
+    width: auto !important;
+    display: flex !important;
+}
