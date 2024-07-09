@@ -9,11 +9,11 @@ const Header = () => {
             <Link to={'/'}>
                 <HStack>
                     <IoDiamondOutline color='gold' size={'18'} />
-                    <Heading fontFamily={'Sofia'} fontSize={'xl'}>Deependra Parmar...</Heading>
+                    <Heading fontFamily={'Sofia'} fontSize={['md','md','xl','xl']}>Deependra Parmar</Heading>
                 </HStack>
             </Link>
             <HStack gap={2}>
-                <Link to="/"><Button background='purple.100' color={'white'} size={'sm'} _hover={{backgroundColor: 'purple.200'}}>Hire Me</Button></Link>
+                <Link to="mailto:deependraparmar1@gmail.com" target='_blank'><Button background='purple.100' color={'white'} size={'sm'} _hover={{backgroundColor: 'purple.200'}}>Hire Me</Button></Link>
                 <Link to="/"><Button size={'sm'}>Resume</Button></Link>
             </HStack>
         </HStack>

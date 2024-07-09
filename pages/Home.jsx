@@ -26,13 +26,39 @@ const Home = () => {
             
             <TabPanels>
               <TabPanel>
-                <p>one!</p>
+                <About />
               </TabPanel>
+
               <TabPanel>
-                <p>two!</p>
+                <Education />
               </TabPanel>
+
               <TabPanel>
-                <p>three!</p>
+                <Skills />
+              </TabPanel>
+
+              <TabPanel>
+                <Certifications />
+              </TabPanel>
+
+              <TabPanel>
+                <Achievements />
+              </TabPanel>
+
+              <TabPanel>
+                <Projects />
+              </TabPanel>
+
+              <TabPanel>
+                <CodingProfiles />
+              </TabPanel>
+
+              <TabPanel>
+                <MyPassion />
+              </TabPanel>
+
+              <TabPanel>
+                <Contact />
               </TabPanel>
             </TabPanels>
           </Tabs>
