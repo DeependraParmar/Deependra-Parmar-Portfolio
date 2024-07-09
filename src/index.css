@@ -12,6 +12,11 @@ body,
     font-family: Inter, sans-serif;
 }
 
+::selection{
+    background-color: #5f5dff;
+    color: white;
+}
+
 .sidebar_links{
     position: relative;
     cursor: pointer;
@@ -25,10 +30,12 @@ body,
 [role=tab]{
     font-size: 0.8rem !important;
     color: rgb(193, 193, 193) !important;
+    margin: 0px 2px !important;
+    transition: all 0.3s ease-in-out !important;
 }
 [role=tab]:hover{
     color: white !important;
-    background-color: gray;
+    background-color: rgb(61, 61, 61);
 }
 
 [aria-selected=true]{
@@ -42,7 +49,21 @@ body,
     padding-bottom: 10px;
     border-bottom: 1px solid rgb(54, 54, 54);
 }
+.chakra-tabs__tablist::-webkit-scrollbar{
+    display: none !important;
+}
+
 .chakra-tabs__tab{
-    width: auto !important;
-    display: flex !important;
+    width: fit-content !important;
+}
+
+/* custom scrollbar  */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: #151719;
+}
+::-webkit-scrollbar-thumb {
+    background: #5f5dff;
 }

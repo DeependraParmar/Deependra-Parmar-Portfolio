@@ -1,12 +1,11 @@
-import { HStack, Heading, Image, Text, VStack } from '@chakra-ui/react';
+import { HStack, Heading, Image, Stack, Text, VStack } from '@chakra-ui/react';
 import React from 'react';
 import { AiOutlineMail } from "react-icons/ai";
 import { BsGlobe } from "react-icons/bs";
-import { CiLocationOn } from 'react-icons/ci';
 import { FaLinkedinIn } from "react-icons/fa";
 import { FiGithub, FiTwitter } from "react-icons/fi";
-import { PiGraduationCapLight } from "react-icons/pi";
 import { IoLocationOutline } from "react-icons/io5";
+import { PiGraduationCapLight } from "react-icons/pi";
 import { Link } from 'react-router-dom';
 import profile from "../src/assets/me.png";
 
@@ -14,11 +13,13 @@ const Sidebar = () => {
     return (
         <>
             <VStack width={['full', 'full', '30%', '30%']} borderRadius={'10px'} mx={2} my={8} p={4}>
-                <Image p={2} name="Deependra Parmar" src={profile} />
                 <VStack width={'full'} alignItems={'flex-start'} justifyContent={'flex-start'}>
-                    <Heading fontSize={['xl', 'xl', '2xl', '3xl']}>Deependra Parmar</Heading>
-                    <Text color={'gray'} fontWeight={'semibold'}>@deependraparmar</Text>
-                    <Text color={'gray'}>Full Stack Engineer from India, trying to be the best version of myself by being persistent, consistent & doing everything passionately.</Text> <br />
+                    <Stack flexDirection={['row','row','column','column']}>
+                        <Image p={2} name="Deependra Parmar" src={profile} />
+                        <Heading fontSize={['xl', 'xl', '2xl', '3xl']}>Deependra Parmar</Heading>
+                        <Text color={'gray'} fontWeight={'semibold'}>@deependraparmar</Text>
+                        <Text color={'gray'}>Full Stack Engineer from India, trying to be the best version of myself by being persistent, consistent & doing everything passionately.</Text> <br />
+                    </Stack>
 
                     <VStack justifyContent={'flex-start'} alignItems={'flex-start'}>
                         <HStack className='sidebar_links' gap={2} justifyContent={'flex-start'} color={'gray'}><IoLocationOutline size={18} /><Text>India</Text> <Image position={'relative'} width={'30px'} src='https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Flag_of_India.png/1280px-Flag_of_India.png'  /></HStack>
