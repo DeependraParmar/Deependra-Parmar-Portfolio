@@ -13,8 +13,8 @@ const Header = () => {
                 </HStack>
             </Link>
             <HStack gap={2}>
-                <Link to="mailto:deependraparmar1@gmail.com" target='_blank'><Button background='purple.100' color={'white'} size={'sm'} _hover={{backgroundColor: 'purple.200'}}>Hire Me</Button></Link>
-                <Link to="/"><Button size={'sm'}>Resume</Button></Link>
+                <Link to="mailto:deependraparmar1@gmail.com" target='_blank'><Button background='purple.100' color={'white'} size={['xs','sm','sm','sm']} _hover={{backgroundColor: 'purple.200'}}>Hire Me</Button></Link>
+                <Link to="/"><Button size={['xs', 'sm', 'sm', 'sm']}>Resume</Button></Link>
             </HStack>
         </HStack>
     )

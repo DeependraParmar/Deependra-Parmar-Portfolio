@@ -19,7 +19,7 @@ const Sidebar = () => {
                         <VStack height={'full'} alignItems={'flex-start'} justifyContent={'center'} gap={['1','1','1','1']}>
                             <Heading fontSize={['xl', 'xl', '2xl', '3xl']}>Deependra Parmar</Heading>
                             <Text color={'gray'} fontSize={['xs', 'xs', 'sm', 'md']} fontWeight={'semibold'}>@deependraparmar</Text>
-                            <Text color={'gray'} fontSize={['xs','xs','sm','md']}>Full Stack Engineer from India, trying to be the best version of myself by being persistent, consistent.</Text> <br />
+                            <Text color={'gray'} fontSize={['xs','xs','sm','md']}>Full Stack Engineer from India, trying to be the best version of myself by being persistent, consistent & passionate.</Text> <br />
                         </VStack>
                     </Stack>
 

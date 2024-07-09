@@ -116,7 +116,7 @@ const Card = ({ id, title, description, date, score }) => {
         </Text>
 
         <VStack spacing={2} mb={3} textAlign="left">
-          <chakra.h1 fontSize="xl" lineHeight={1.2} fontWeight="bold" w="100%">
+          <chakra.h1 fontSize={['md','md','xl','xl']} lineHeight={1.2} fontWeight="bold" w="100%">
             {title}
           </chakra.h1>
           <Text fontSize="sm">{description}</Text>
