@@ -17,14 +17,14 @@ const Skills = () => {
     <>
         <Accordion width={'full'} allowMultiple allowToggle>
           <AccordionItem my={'4'} border={'none'}>
-            <AccordionButton _hover={{bg: '#25282c'}} p={4} bg={'#25282c'}>
+            <AccordionButton fontSize={['xs','xs','sm','sm']} _hover={{bg: '#25282c'}} p={4} bg={'#25282c'}>
                 <Box as='span' flex='1' textAlign='left'>
-                  Programming Languages I prefer programming in
+                  Languages I prefer programming in
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
             <AccordionPanel border={'1px solid #25282c'} pb={4}>
-              <HStack w={'full'} justifyContent={'flex-start'} alignItems={'flex-start'}>
+              <HStack w={'full'} wrap="wrap" justifyContent={'flex-start'} alignItems={'flex-start'}>
                 {
                   languages.map((skill, index) => (
                     <Skill key={index} skill={skill} />
@@ -37,7 +37,7 @@ const Skills = () => {
 
           
           <AccordionItem my={'4'} border={'none'}>
-            <AccordionButton _hover={{bg: '#25282c'}} p={4} bg={'#25282c'}>
+            <AccordionButton fontSize={['xs','xs','sm','sm']} _hover={{bg: '#25282c'}} p={4} bg={'#25282c'}>
                 <Box as='span' flex='1' textAlign='left'>
                   Frontend Technologies I am proficient in
                 </Box>
@@ -57,7 +57,7 @@ const Skills = () => {
 
           
           <AccordionItem my={'4'} border={'none'}>
-            <AccordionButton _hover={{bg: '#25282c'}} p={4} bg={'#25282c'}>
+            <AccordionButton fontSize={['xs','xs','sm','sm']} _hover={{bg: '#25282c'}} p={4} bg={'#25282c'}>
                 <Box as='span' flex='1' textAlign='left'>
                   Backend Technologies I have mastered
                 </Box>
@@ -77,7 +77,7 @@ const Skills = () => {
 
           
           <AccordionItem my={'4'} border={'none'}>
-            <AccordionButton _hover={{bg: '#25282c'}} p={4} bg={'#25282c'}>
+            <AccordionButton fontSize={['xs','xs','sm','sm']} _hover={{bg: '#25282c'}} p={4} bg={'#25282c'}>
                 <Box as='span' flex='1' textAlign='left'>
                   Databases & ORM's I prefer using
                 </Box>
@@ -97,14 +97,14 @@ const Skills = () => {
 
           
           <AccordionItem my={'4'} border={'none'}>
-            <AccordionButton _hover={{bg: '#25282c'}} p={4} bg={'#25282c'}>
+            <AccordionButton fontSize={['xs','xs','sm','sm']} _hover={{bg: '#25282c'}} p={4} bg={'#25282c'}>
                 <Box as='span' flex='1' textAlign='left'>
                   Tools that makes my life easier
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
             <AccordionPanel border={'1px solid #25282c'} pb={4}>
-              <HStack w={'full'} justifyContent={'flex-start'} alignItems={'flex-start'}>
+              <HStack w={'full'} wrap="wrap" justifyContent={'flex-start'} alignItems={'flex-start'}>
                 {
                   tools.map((skill, index) => (
                     <Skill key={index} skill={skill} />
@@ -117,14 +117,14 @@ const Skills = () => {
 
           
           <AccordionItem my={'4'} border={'none'}>
-            <AccordionButton _hover={{bg: '#25282c'}} p={4} bg={'#25282c'}>
+            <AccordionButton fontSize={['xs','xs','sm','sm']} _hover={{bg: '#25282c'}} p={4} bg={'#25282c'}>
                 <Box as='span' flex='1' textAlign='left'>
                   Payment Gateways I have intergrated & used till now
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
             <AccordionPanel border={'1px solid #25282c'} pb={4}>
-              <HStack w={'full'} justifyContent={'flex-start'} alignItems={'flex-start'}>
+              <HStack w={'full'} wrap="wrap" justifyContent={'flex-start'} alignItems={'flex-start'}>
                 {
                   paymentGateways.map((skill, index) => (
                     <Skill key={index} skill={skill} />
@@ -137,14 +137,14 @@ const Skills = () => {
 
           
           <AccordionItem my={'4'} border={'none'}>
-            <AccordionButton _hover={{bg: '#25282c'}} p={4} bg={'#25282c'}>
+            <AccordionButton fontSize={['xs','xs','sm','sm']} _hover={{bg: '#25282c'}} p={4} bg={'#25282c'}>
                 <Box as='span' flex='1' textAlign='left'>
                   Best Cloud Services I prefer using
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
             <AccordionPanel border={'1px solid #25282c'} pb={4}>
-              <HStack w={'full'} justifyContent={'flex-start'} alignItems={'flex-start'}>
+              <HStack w={'full'} wrap="wrap" justifyContent={'flex-start'} alignItems={'flex-start'}>
                 {
                   clouds.map((skill, index) => (
                     <Skill key={index} skill={skill} />
@@ -157,14 +157,14 @@ const Skills = () => {
 
           
           <AccordionItem my={'4'} border={'none'}>
-            <AccordionButton _hover={{bg: '#25282c'}} p={4} bg={'#25282c'}>
+            <AccordionButton fontSize={['xs','xs','sm','sm']} _hover={{bg: '#25282c'}} p={4} bg={'#25282c'}>
                 <Box as='span' flex='1' textAlign='left'>
                   Testing Frameworks I have prefer for hassle free testing
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
             <AccordionPanel border={'1px solid #25282c'} pb={4}>
-              <HStack w={'full'} justifyContent={'flex-start'} alignItems={'flex-start'}>
+              <HStack w={'full'} wrap="wrap" justifyContent={'flex-start'} alignItems={'flex-start'}>
                 {
                   testing.map((skill, index) => (
                     <Skill key={index} skill={skill} />
@@ -177,14 +177,14 @@ const Skills = () => {
 
           
           <AccordionItem my={'4'} border={'none'}>
-            <AccordionButton _hover={{bg: '#25282c'}} p={4} bg={'#25282c'}>
+            <AccordionButton fontSize={['xs','xs','sm','sm']} _hover={{bg: '#25282c'}} p={4} bg={'#25282c'}>
                 <Box as='span' flex='1' textAlign='left'>
                   DevOps Stuff that I have worked upon
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
             <AccordionPanel border={'1px solid #25282c'} pb={4}>
-              <HStack w={'full'} justifyContent={'flex-start'} alignItems={'flex-start'}>
+              <HStack w={'full'} wrap="wrap" justifyContent={'flex-start'} alignItems={'flex-start'}>
                 {
                   devOps.map((skill, index) => (
                     <Skill key={index} skill={skill} />
@@ -196,14 +196,14 @@ const Skills = () => {
 
           
           <AccordionItem my={'4'} border={'none'}>
-            <AccordionButton _hover={{bg: '#25282c'}} p={4} bg={'#25282c'}>
+            <AccordionButton fontSize={['xs','xs','sm','sm']} _hover={{bg: '#25282c'}} p={4} bg={'#25282c'}>
                 <Box as='span' flex='1' textAlign='left'>
                   My Soft Skills that makes me unique
                 </Box>
                 <AccordionIcon />
               </AccordionButton>
             <AccordionPanel border={'1px solid #25282c'} pb={4}>
-              <HStack w={'full'} justifyContent={'flex-start'} alignItems={'flex-start'}>
+              <HStack w={'full'} wrap="wrap" justifyContent={'flex-start'} alignItems={'flex-start'}>
                 {
                   softskills.map((skill, index) => (
                     <Skill key={index} skill={skill} />
