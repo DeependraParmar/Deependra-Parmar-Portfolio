@@ -98,7 +98,7 @@ const Certifications = () => {
                   </HStack>
                   <Text fontSize={'xs'} color={'gray'} noOfLines={'2'}>{certificate.description}</Text>
                   <Text fontSize={'xs'} color={'gray'} noOfLines={'1'}>Issued by: <span className='highlight' style={{color: 'white'}}>{certificate.issuer}</span></Text>
-                  <Button border={'1px solid black'} _hover={{borderColor: 'red'}} gap={1} mt={2} bg={'black'} color={'white'} size={'sm'}><Link to={certificate.link} target='_blank'>Link</Link> <BsFillRecordFill color='red' /></Button>
+                  <Button border={'1px solid black'} _hover={{borderColor: 'red'}} gap={1} mt={2} bg={'black'} color={'white'} size={'sm'}><Link to={certificate.link} target='_blank'>Live</Link> <BsFillRecordFill color='red' /></Button>
                 </VStack>
               </Card>
             )
