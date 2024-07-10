@@ -40,7 +40,7 @@ const Education = () => {
   const isDesktop = useBreakpointValue({ base: false, md: true });
 
   return (
-    <Container maxWidth="7xl" p={{ base: 2, sm: 10 }}>
+    <Container maxWidth="7xl" p={{ base: 0, sm: 4 }}>
       {educations.map((education) => (
         <Flex key={education.id} mb="10px">
           {/* Desktop view(left card) */}
@@ -93,7 +93,7 @@ const Card = ({ id, title, description, date, score }) => {
       flex={1}
       p={{ base: 3, sm: 6 }}
       bg={'#25282c'}
-      spacing={6}
+      gap={4}
       rounded="lg"
       alignItems="center"
       pos="relative"

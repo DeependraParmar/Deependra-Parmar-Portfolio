@@ -21,7 +21,7 @@ const Home = () => {
         <Sidebar />
         <ContentBox>
           <Tabs variant={'soft-rounded'}>
-            <TabList>
+            <TabList gap={0}>
               <Tab>About</Tab>
               <Tab>Education</Tab>
               <Tab>Skills</Tab>
@@ -29,7 +29,7 @@ const Home = () => {
               <Tab>Achievements</Tab>
               <Tab>Projects</Tab>
               <Tab>Coding Profiles</Tab>
-              <Tab>My Passion</Tab>
+              <Tab>Passion</Tab>
               <Tab>Contact</Tab>
             </TabList>
             
