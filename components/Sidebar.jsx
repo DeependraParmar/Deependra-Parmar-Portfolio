@@ -14,8 +14,8 @@ const Sidebar = () => {
         <>
             <VStack width={['full', 'full', '30%', '30%']} borderRadius={'10px'} mx={[0,0,0,2]} my={[2,2,2,8]} p={4}>
                 <VStack width={'full'} alignItems={'flex-start'} justifyContent={'flex-start'}>
-                    <Stack flexDirection={['row','row','column','column']} alignItems={['flex-start','','','center']} justifyContent={'center'}>
-                        <Image width={['40%','40%','90%','90%']} name="Deependra Parmar" src={profile} />
+                    <Stack flexDirection={['row','row','column','column']} alignItems={['flex-start','','','center']} justifyContent={'center'} gap={4}>
+                        <Image width={['38%','40%','90%','90%']} name="Deependra Parmar" src={profile} />
                         <VStack height={'full'} alignItems={'flex-start'} justifyContent={'center'} gap={['1','1','1','1']}>
                             <Heading fontSize={['xl', 'xl', '2xl', '3xl']}>Deependra Parmar</Heading>
                             <Text color={'gray'} fontSize={['xs', 'xs', 'sm', 'md']} fontWeight={'semibold'}>@deependraparmar</Text>
