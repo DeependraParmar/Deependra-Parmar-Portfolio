@@ -15,7 +15,7 @@ const Skills = () => {
 
   return (
     <>
-        <Accordion width={'full'} allowMultiple allowToggle>
+        <Accordion width={'full'} index={[0,1,2,3,4,5,6,7,8,9]} allowMultiple allowToggle>
           <AccordionItem my={'4'} border={'none'}>
             <AccordionButton fontSize={['xs','xs','sm','sm']} _hover={{bg: '#25282c'}} p={4} bg={'#25282c'}>
                 <Box as='span' flex='1' textAlign='left'>
