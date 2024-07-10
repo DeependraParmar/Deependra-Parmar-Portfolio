@@ -10,7 +10,7 @@ const Skills = () => {
   const tools = ['Git', 'GitHub', 'VS Code', 'Postman', 'WSL', 'Compass', 'pgAdmin'];
   const clouds = ['Vercel', 'Netlify', 'Render', 'AWS', 'Firebase'];
   const testing = ['Jest', 'Vitest','Supertest', 'Cypress'];
-  const devOps = ['Docker', 'Kubernetes(working upons)']
+  const devOps = ['Docker', 'Kubernetes(working upon)']
   const softskills = ['Problem Solving', 'Team player', 'Public Speaking']
 
   return (

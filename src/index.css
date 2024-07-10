@@ -29,7 +29,7 @@ body,
 
 [role=tab]{
     font-size: 0.8rem !important;
-    color: rgb(193, 193, 193) !important;
+    color: rgb(255, 255, 255) !important;
     margin: 0px 2px !important;
     transition: all 0.3s ease-in-out !important;
 }
@@ -55,6 +55,7 @@ body,
 
 .chakra-tabs__tab{
     width: fit-content !important;
+    border-radius: 5px !important;
 }
 
 /* custom scrollbar  */
@@ -66,4 +67,10 @@ body,
 }
 ::-webkit-scrollbar-thumb {
     background: #5f5dff;
+}
+
+.highlight{
+    font-weight: 600;
+    text-decoration: underline;
+    
 }
