@@ -78,7 +78,7 @@ const ProjectCard = (props) => {
   };
 
   return (
-    <Box cursor="pointer" size="xl">
+    <Box cursor="pointer" size="xl" _hover={{ transform: 'translateY(-10px)' }} transition={'all 0.4s ease-in-out'}>
       <VStack
         rounded="xl"
         bg={'#25282c'}

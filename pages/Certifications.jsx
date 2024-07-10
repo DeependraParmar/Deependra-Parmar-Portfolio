@@ -86,7 +86,7 @@ const Certifications = () => {
         {
           certificates.map((certificate, index) => {
             return (
-              <Card mb={4} bg={'#25282c'} w={['full', '45%', '30%', '30%']} key={index} maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
+              <Card _hover={{transform: 'translateY(-10px)'}} transition={'all 0.4s ease-in-out'} mb={4} bg={'#25282c'} w={['full', '45%', '30%', '30%']} key={index} maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
                 <AspectRatio >
                   <Image width={'full'} src={certificate.url} alt="certificate" />
                 </AspectRatio>

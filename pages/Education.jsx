@@ -144,7 +144,7 @@ const LineWithDot = () => {
         top="0px"
         borderRadius={'4px'}
       ></chakra.span>
-      <Box pos="relative" p="10px">
+      <Box pos="relative" p="10px" >
         <Box
           pos="absolute"
           top="0"
