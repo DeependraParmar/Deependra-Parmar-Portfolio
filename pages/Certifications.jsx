@@ -12,6 +12,7 @@ import java from "../src/assets/certificates/java.jpg";
 import js from "../src/assets/certificates/js.jpg";
 import mern from "../src/assets/certificates/mern.png";
 import postman from "../src/assets/certificates/postman.png";
+import TransitionWrapper from '../components/Transition';
 
 const Certifications = () => {
   const certificates = [
@@ -82,29 +83,31 @@ const Certifications = () => {
   ];
   return (
     <>
-      <HStack position={'relative'} alignItems={'flex-start'} gap={4} justifyContent={'space-evenly'} wrap={'wrap'}  >
-        {
-          certificates.map((certificate, index) => {
-            return (
-              <Card _hover={{transform: 'translateY(-10px)'}} transition={'all 0.4s ease-in-out'} mb={4} bg={'#25282c'} w={['full', '45%', '30%', '30%']} key={index} maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
-                <AspectRatio >
-                  <Image width={'full'} src={certificate.url} alt="certificate" />
-                </AspectRatio>
+      <TransitionWrapper>
+        <HStack position={'relative'} alignItems={'flex-start'} gap={4} justifyContent={'space-evenly'} wrap={'wrap'}  >
+          {
+            certificates.map((certificate, index) => {
+              return (
+                <Card _hover={{ transform: 'translateY(-10px)' }} transition={'all 0.4s ease-in-out'} mb={4} bg={'#25282c'} w={['full', '45%', '30%', '30%']} key={index} maxW="sm" borderWidth="1px" borderRadius="lg" overflow="hidden">
+                  <AspectRatio >
+                    <Image width={'full'} src={certificate.url} alt="certificate" />
+                  </AspectRatio>
 
-                <VStack p={4} color={'white'} fontSize={'sm'} justifyContent={'flex-start'} alignItems={'flex-start'}>
-                  <HStack>
-                    <Text color={''} noOfLines={1} fontWeight={'600'}>{certificate.title}</Text>
-                    <LuBadgeCheck color='gold' size={16} />
-                  </HStack>
-                  <Text fontSize={'xs'} color={'gray'} noOfLines={'2'}>{certificate.description}</Text>
-                  <Text fontSize={'xs'} color={'gray'} noOfLines={'1'}>Issued by: <span className='highlight' style={{color: 'white'}}>{certificate.issuer}</span></Text>
-                  <Button border={'1px solid black'} _hover={{borderColor: 'red'}} gap={1} mt={2} bg={'black'} color={'white'} size={'sm'}><Link to={certificate.link} target='_blank'>Live</Link> <BsFillRecordFill color='red' /></Button>
-                </VStack>
-              </Card>
-            )
-          })
-        }
-      </HStack>
+                  <VStack p={4} color={'white'} fontSize={'sm'} justifyContent={'flex-start'} alignItems={'flex-start'}>
+                    <HStack>
+                      <Text color={''} noOfLines={1} fontWeight={'600'}>{certificate.title}</Text>
+                      <LuBadgeCheck color='gold' size={16} />
+                    </HStack>
+                    <Text fontSize={'xs'} color={'gray'} noOfLines={'2'}>{certificate.description}</Text>
+                    <Text fontSize={'xs'} color={'gray'} noOfLines={'1'}>Issued by: <span className='highlight' style={{ color: 'white' }}>{certificate.issuer}</span></Text>
+                    <Button border={'1px solid black'} _hover={{ borderColor: 'red' }} gap={1} mt={2} bg={'black'} color={'white'} size={'sm'}><Link to={certificate.link} target='_blank'>Live</Link> <BsFillRecordFill color='red' /></Button>
+                  </VStack>
+                </Card>
+              )
+            })
+          }
+        </HStack>
+      </TransitionWrapper>
     </>
   )
 }

@@ -5,6 +5,7 @@ import { AiOutlineStar } from 'react-icons/ai';
 import { BsFillRecordFill } from 'react-icons/bs';
 import { FiGithub } from 'react-icons/fi';
 import coursify from "../src/assets/01_coursify.png";
+import TransitionWrapper from '../components/Transition';
 
 const Projects = () => {
   const projectsList = [{
@@ -32,22 +33,24 @@ const Projects = () => {
   ];
 
   return (
-    <Container maxW="7xl" mx="auto">
-      <SimpleGrid columns={[1, 3]} spacing={4} mt={4}>
-        {projectsList.map((project, index) => (
-          <ProjectCard
-            key={index}
-            title={project.title}
-            description={project.description}
-            cover={project.cover}
-            techStack={project.techStack}
-            url={project.url}
-            stargazers_count={project.stargazers_count}
-            live={project.live}
-          />
-        ))}
-      </SimpleGrid>
-    </Container>
+    <TransitionWrapper>
+      <Container maxW="7xl" mx="auto">
+        <SimpleGrid columns={[1, 3]} spacing={4} mt={4}>
+          {projectsList.map((project, index) => (
+            <ProjectCard
+              key={index}
+              title={project.title}
+              description={project.description}
+              cover={project.cover}
+              techStack={project.techStack}
+              url={project.url}
+              stargazers_count={project.stargazers_count}
+              live={project.live}
+            />
+          ))}
+        </SimpleGrid>
+      </Container>
+    </TransitionWrapper>
   )
 }
 

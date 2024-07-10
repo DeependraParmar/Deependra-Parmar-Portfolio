@@ -10,6 +10,7 @@ import {
   useColorModeValue,
   useBreakpointValue
 } from '@chakra-ui/react';
+import TransitionWrapper from '../components/Transition';
 
 const educations = [
   {
@@ -40,38 +41,40 @@ const Education = () => {
   const isDesktop = useBreakpointValue({ base: false, md: true });
 
   return (
-    <Container maxWidth="7xl" p={{ base: 0, sm: 4 }}>
-      {educations.map((education) => (
-        <Flex key={education.id} mb="10px">
-          {/* Desktop view(left card) */}
-          {isDesktop && education.id % 2 === 0 && (
-            <>
-              <EmptyCard />
-              <LineWithDot />
-              <Card {...education} />
-            </>
-          )}
+    <TransitionWrapper>
+      <Container maxWidth="7xl" p={{ base: 0, sm: 4 }}>
+        {educations.map((education) => (
+          <Flex key={education.id} mb="10px">
+            {/* Desktop view(left card) */}
+            {isDesktop && education.id % 2 === 0 && (
+              <>
+                <EmptyCard />
+                <LineWithDot />
+                <Card {...education} />
+              </>
+            )}
 
-          {/* Mobile view */}
-          {isMobile && (
-            <>
-              <LineWithDot />
-              <Card {...education} />
-            </>
-          )}
+            {/* Mobile view */}
+            {isMobile && (
+              <>
+                <LineWithDot />
+                <Card {...education} />
+              </>
+            )}
 
-          {/* Desktop view(right card) */}
-          {isDesktop && education.id % 2 !== 0 && (
-            <>
-              <Card {...education} />
+            {/* Desktop view(right card) */}
+            {isDesktop && education.id % 2 !== 0 && (
+              <>
+                <Card {...education} />
 
-              <LineWithDot />
-              <EmptyCard />
-            </>
-          )}
-        </Flex>
-      ))}
-    </Container>
+                <LineWithDot />
+                <EmptyCard />
+              </>
+            )}
+          </Flex>
+        ))}
+      </Container>
+    </TransitionWrapper>
   );
 };
 
