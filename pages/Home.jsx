@@ -1,4 +1,4 @@
-import { Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react'
+import { HStack, Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react'
 import React from 'react'
 import ContentBox from '../components/ContentBox'
 import MainWrapper from '../components/MainWrapper'
@@ -28,7 +28,7 @@ const Home = () => {
               <Tab>Certifications</Tab>
               <Tab>Achievements</Tab>
               <Tab>Projects</Tab>
-              <Tab>Coding Profiles</Tab>
+              <Tab>Coding&nbsp;Profiles</Tab>
               <Tab>Passion</Tab>
               <Tab>Contact</Tab>
             </TabList>
