@@ -72,6 +72,12 @@ body,
 
 .highlight{
     font-weight: 600;
-    text-decoration: underline;
-    
+    text-decoration: underline; 
+}
+.highlight-code{
+    font-weight: 600;
+    color: orange;
+}
+.highlight-code:hover{
+    text-decoration: underline; 
 }
