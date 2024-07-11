@@ -1,5 +1,5 @@
-import { HStack, Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react'
-import React from 'react'
+import { Button, HStack, Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react'
+import React, { useEffect, useState } from 'react'
 import ContentBox from '../components/ContentBox'
 import MainWrapper from '../components/MainWrapper'
 import Sidebar from '../components/Sidebar'
@@ -12,9 +12,25 @@ import Education from './Education'
 import MyPassion from './MyPassion'
 import Projects from './Projects'
 import Skills from './Skills'
+import { RiArrowUpDoubleLine } from 'react-icons/ri'
 
 
 const Home = () => {
+  const [show, setShow] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setShow(true)
+      } else {
+        setShow(false)
+      }
+    }
+    window.addEventListener('scroll', handleScroll);
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
     <>
       <MainWrapper>
@@ -32,7 +48,7 @@ const Home = () => {
               <Tab>Passion</Tab>
               <Tab>Contact</Tab>
             </TabList>
-            
+
             <TabPanels>
               <TabPanel>
                 <About />
@@ -73,6 +89,12 @@ const Home = () => {
           </Tabs>
         </ContentBox>
       </MainWrapper>
+
+      <>
+        {
+          show && <Button _hover={{ bg: '#4a4acc', transform: 'scale(1.1)' }} transition={'all 0.2s ease-in-out'} position={'fixed'} bottom={4} rounded={'full'} bg={'#675dff'} size={['sm','md']} color={'white'} right={4} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}><RiArrowUpDoubleLine size={'20'} /> </Button>
+        }
+      </>
     </>
   )
 }

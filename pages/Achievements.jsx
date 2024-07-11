@@ -1,10 +1,11 @@
 import React from 'react'
+import TransitionWrapper from "../components/Transition";
 
 const Achievements = () => {
   return (
-    <div>
-      Hey there, this is my achievements page
-    </div>
+    <TransitionWrapper>
+      
+    </TransitionWrapper>
   )
 }
 
