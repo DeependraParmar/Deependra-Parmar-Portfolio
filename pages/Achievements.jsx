@@ -328,7 +328,7 @@ const MilestoneItem = ({
       <Flex minH={20} {...props}>
         <Flex flexDir="column" alignItems="center" mr={4} pos="relative">
           <Circle
-            size={[10, 12]}
+            size={12}
             bg={'#25282c'}
             border={'1px solid'}
             borderColor={color}
