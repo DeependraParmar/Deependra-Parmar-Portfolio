@@ -103,7 +103,7 @@ const ProjectCard = (props) => {
           </AspectRatio>
         </Box>
 
-        <VStack py={2} px={[2, 4]} spacing={2} align="start" w="100%">
+        <VStack py={2} px={4} spacing={2} align="start" w="100%">
           <Flex justifyContent="space-between" width="100%">
             <Tooltip hasArrow label="Github link" placement="top">
               <HStack>

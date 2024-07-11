@@ -55,6 +55,9 @@ body,
     width: fit-content !important;
     border-radius: 5px !important;
 }
+[role=tabpanel]{
+    padding: 8px !important
+}
 
 /* custom scrollbar  */
 ::-webkit-scrollbar {
