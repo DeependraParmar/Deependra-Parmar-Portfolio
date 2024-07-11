@@ -5,7 +5,7 @@ import { BsGlobe } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FiGithub, FiTwitter } from "react-icons/fi";
 import { IoLocationOutline } from "react-icons/io5";
-import { PiGraduationCapLight } from "react-icons/pi";
+import { PiGraduationCapLight, PiYoutubeLogo } from "react-icons/pi";
 import { Link } from 'react-router-dom';
 import profile from "../src/assets/me.png";
 import TransitionWrapper from "./Transition";
@@ -41,6 +41,10 @@ const Sidebar = () => {
 
                         <TransitionWrapper>
                             <HStack className='sidebar_links' gap={2} justifyContent={'flex-start'} color={'gray'}><FiGithub size={18} /><Link to={'https://github.com/DeependraParmar'} target='_blank' >DeependraParmar</Link></HStack>
+                        </TransitionWrapper>
+                        
+                        <TransitionWrapper>
+                            <HStack className='sidebar_links' gap={2} justifyContent={'flex-start'} color={'gray'}><PiYoutubeLogo size={18} /><Link to={'https://learnlogics.page.link/RtQw'} target='_blank' >@learnlogics</Link></HStack>
                         </TransitionWrapper>
 
                         <TransitionWrapper>

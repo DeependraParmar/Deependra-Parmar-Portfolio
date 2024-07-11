@@ -92,7 +92,7 @@ const Home = () => {
 
       <>
         {
-          show && <Button _hover={{ bg: '#4a4acc', transform: 'scale(1.1)' }} transition={'all 0.2s ease-in-out'} position={'fixed'} bottom={4} rounded={'full'} bg={'#675dff'} size={['sm','md']} color={'white'} right={4} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}><RiArrowUpDoubleLine size={'20'} /> </Button>
+          show && <Button _hover={{ bg: '#4a4acc', transform: 'scale(1.1)' }} transition={'all 0.2s ease-in-out'} position={'fixed'} bottom={[8,4]} rounded={'full'} bg={'#675dff'} size={['sm','md']} color={'white'} right={8} onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}><RiArrowUpDoubleLine size={'20'} /> </Button>
         }
       </>
     </>

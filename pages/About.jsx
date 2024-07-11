@@ -6,7 +6,7 @@ const About = () => {
   return (
     <>
       <TransitionWrapper>
-        <VStack gap={4} fontSize={['xs', 'xs', 'sm', 'sm']} alignItems={'flex-start'}>
+        <VStack gap={4} fontSize={['smaller', 'sm']} alignItems={'flex-start'}>
           <Text>Hey everyone 👋, I am <span className="highlight">Deependra Parmar</span>, a final year B.Tech. student persuing Computer Science & Information Technology (2021-25) from <span className="highlight">Acropolis Institute of Technology & Research, Indore.</span></Text>
           <Text>I am a very curious person. I always have a keen curiosity of how the things, technologies and tools around which the life moves works. This quality of mine has always benefitted me and helped me to learn things better, easier and faster.</Text>
           <Text>Who knew that the average but curious student in class 10th, who wanted to become a Chemistry Teacher will end up being a Full Stack Enginner at the end of his graduation. My journey took the U-turn when I got to choose <span className="highlight">#Information_Practices</span> in my class 11th. The way I am today is the result of that decision of mine. During the two years i.e. in class 11th and 12th, I got to learn a lot of things about computer hardware, software, information, security, data and a programming language <span className="highlight">Python.</span> </Text>

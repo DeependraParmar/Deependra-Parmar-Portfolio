@@ -11,7 +11,8 @@ const TransitionWrapper = ({children}) => {
                 opacity: 1,
                 y: 0,
                 ease: "easeInOut",
-                }}            
+                }}  
+                style={{width: '100%'}}          
           >
             {children}
           </motion.div>
