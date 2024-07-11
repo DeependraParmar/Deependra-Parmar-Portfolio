@@ -51,7 +51,7 @@ const Coding_Profiles = () => {
                 <VStack cursor={'pointer'} border={'1px solid #25282c'} onClick={e => handleClick(e, profile.link)} bg={'#25282c'} gap={4} transition={'all 0.4s ease-in-out'} _hover={{transform: 'translateY(-10px)', border: '1px solid', borderColor: profile.colorScheme}} p={4} borderRadius={'10px'} key={index} width={['95%','40%','20%', '22%']}>
                   <Image filter={'saturate(150%)'} borderRadius={'full'} width={48} height={'48'} src={profile.image} bg={'#25282c'} />
                   <Text fontWeight={'600'} fontSize={['sm','lg']}>{profile.name}</Text>
-                  <Link to={profile.link} target='_blank'><Button gap={1} size={'sm'} colorScheme={profile.colorScheme}>Visit <LuExternalLink size={18} /> </Button></Link>
+                  <Link to={profile.link} target='_blank'><Button gap={1} size={'sm'} colorScheme={profile.colorScheme}>Profile <LuExternalLink size={18} /> </Button></Link>
                 </VStack>
               )
             })
