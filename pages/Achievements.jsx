@@ -16,8 +16,7 @@ import { Link } from "react-router-dom";
 import TransitionWrapper from '../components/Transition';
 
 const Milestones = () => {
-  const linkColor = 'gold';
-  const linkHoverColor = 'goldenrod';
+  const linkColor = ['#38B2AC', '#F56565', '#48BB78','#4299e1'];
 
   return (
     <Container maxW="7xl" p={{ base: 2, sm: 10 }}>
@@ -50,69 +49,259 @@ const Milestones = () => {
 
         <Box zIndex={5}>
           <Heading fontSize="2xl" fontWeight="600" my={5}>
-            2021
+            2024
           </Heading>
           <Box>
-            <MilestoneItem icon={FaTools}>
+            <MilestoneItem color={linkColor[0]} icon={FaTools}>
               Learnt{' '}
               <Link
                 to="https://www.typescriptlang.org"
-                color={linkColor}
-                _hover={{ color: linkHoverColor }}
-                isExternal
+                style={{color: linkColor[0], _hover: {color: linkColor[0]}}}
               >
                 Typescript
               </Link>{' '}
               and{' '}
               <Link
                 to="https://nextjs.org"
-                color={linkColor}
-                _hover={{ color: linkHoverColor }}
-                isExternal
+                style={{color: linkColor[0], _hover: {color: linkColor[0]}}}
+                
               >
                 Next.js
               </Link>
             </MilestoneItem>
-            <MilestoneItem icon={FiPackage}>
+            <MilestoneItem color={linkColor[0]} icon={FiPackage}>
               Published 3 posts on my portfolio website{' '}
               <Link
                 to="https://mahmad.me/blog"
-                color={linkColor}
-                _hover={{ color: linkHoverColor }}
-                isExternal
+                style={{color: linkColor[0], _hover: {color: linkColor[0]}}}
+                
               >
                 Blog
               </Link>
             </MilestoneItem>
-            <MilestoneItem icon={FiPackage}>
+            <MilestoneItem color={linkColor[0]} icon={FiPackage}>
               Published or contributed to{' '}
               <Link
                 to="https://mahmad.me/open-source"
-                color={linkColor}
-                _hover={{ color: linkHoverColor }}
-                isExternal
+                style={{color: linkColor[0], _hover: {color: linkColor[0]}}}
+                
               >
                 20+ open-source repositories
               </Link>
             </MilestoneItem>
-            <MilestoneItem icon={FiBarChart2}>
+            <MilestoneItem color={linkColor[0]} icon={FiBarChart2}>
               Collected 34k+ posts views and 1.5k+ total reactions on{' '}
               <Link
                 to="https://dev.to/m_ahmad"
-                color={linkColor}
-                _hover={{ color: linkHoverColor }}
-                isExternal
+                style={{color: linkColor[0], _hover: {color: linkColor[0]}}}
+                
               >
                 Dev.to
               </Link>
             </MilestoneItem>
-            <MilestoneItem icon={FiHome} skipTrail>
+            <MilestoneItem color={linkColor[0]} icon={FiHome} skipTrail>
               Rebuilt my portfolio website with React, ChakraUI and Framer-motion,{' '}
               <Link
                 to="https://github.com/MA-Ahmad/myPortfolio"
-                color={linkColor}
-                _hover={{ color: linkHoverColor }}
-                isExternal
+                style={{color: linkColor[0], _hover: {color: linkColor[0]}}}
+                
+              >
+                source on Github
+              </Link>
+              .
+            </MilestoneItem>
+          </Box>
+        </Box>
+
+
+        <Box zIndex={5}>
+          <Heading fontSize="2xl" fontWeight="600" my={5}>
+            2023
+          </Heading>
+          <Box>
+            <MilestoneItem color={linkColor[1]} icon={FaTools}>
+              Learnt{' '}
+              <Link
+                to="https://www.typescriptlang.org"
+                style={{color: linkColor[1], _hover: {color: linkColor[1]}}}
+              >
+                Typescript
+              </Link>{' '}
+              and{' '}
+              <Link
+                to="https://nextjs.org"
+                style={{color: linkColor[1], _hover: {color: linkColor[1]}}}
+                
+              >
+                Next.js
+              </Link>
+            </MilestoneItem>
+            <MilestoneItem color={linkColor[1]} icon={FiPackage}>
+              Published 3 posts on my portfolio website{' '}
+              <Link
+                to="https://mahmad.me/blog"
+                style={{color: linkColor[1], _hover: {color: linkColor[1]}}}
+                
+              >
+                Blog
+              </Link>
+            </MilestoneItem>
+            <MilestoneItem color={linkColor[1]} icon={FiPackage}>
+              Published or contributed to{' '}
+              <Link
+                to="https://mahmad.me/open-source"
+                style={{color: linkColor[1], _hover: {color: linkColor[1]}}}
+                
+              >
+                20+ open-source repositories
+              </Link>
+            </MilestoneItem>
+            <MilestoneItem color={linkColor[1]} icon={FiBarChart2}>
+              Collected 34k+ posts views and 1.5k+ total reactions on{' '}
+              <Link
+                to="https://dev.to/m_ahmad"
+                style={{color: linkColor[1], _hover: {color: linkColor[1]}}}
+                
+              >
+                Dev.to
+              </Link>
+            </MilestoneItem>
+            <MilestoneItem color={linkColor[1]} icon={FiHome} skipTrail>
+              Rebuilt my portfolio website with React, ChakraUI and Framer-motion,{' '}
+              <Link
+                to="https://github.com/MA-Ahmad/myPortfolio"
+                style={{color: linkColor[1], _hover: {color: linkColor[1]}}}
+                
+              >
+                source on Github
+              </Link>
+              .
+            </MilestoneItem>
+          </Box>
+        </Box>
+        <Box zIndex={5}>
+          <Heading fontSize="2xl" fontWeight="600" my={5}>
+            2022
+          </Heading>
+          <Box>
+            <MilestoneItem color={linkColor[2]} icon={FaTools}>
+              Learnt{' '}
+              <Link
+                to="https://www.typescriptlang.org"
+                style={{ color: linkColor[2], _hover: { color: linkColor[2] } }}
+              >
+                Typescript
+              </Link>{' '}
+              and{' '}
+              <Link
+                to="https://nextjs.org"
+                style={{ color: linkColor[2], _hover: { color: linkColor[2] } }}
+
+              >
+                Next.js
+              </Link>
+            </MilestoneItem>
+            <MilestoneItem color={linkColor[2]} icon={FiPackage}>
+              Published 3 posts on my portfolio website{' '}
+              <Link
+                to="https://mahmad.me/blog"
+                style={{ color: linkColor[2], _hover: { color: linkColor[2] } }}
+
+              >
+                Blog
+              </Link>
+            </MilestoneItem>
+            <MilestoneItem color={linkColor[2]} icon={FiPackage}>
+              Published or contributed to{' '}
+              <Link
+                to="https://mahmad.me/open-source"
+                style={{ color: linkColor[2], _hover: { color: linkColor[2] } }}
+
+              >
+                20+ open-source repositories
+              </Link>
+            </MilestoneItem>
+            <MilestoneItem color={linkColor[2]} icon={FiBarChart2}>
+              Collected 34k+ posts views and 1.5k+ total reactions on{' '}
+              <Link
+                to="https://dev.to/m_ahmad"
+                style={{ color: linkColor[2], _hover: { color: linkColor[2] } }}
+
+              >
+                Dev.to
+              </Link>
+            </MilestoneItem>
+            <MilestoneItem color={linkColor[2]} icon={FiHome} skipTrail>
+              Rebuilt my portfolio website with React, ChakraUI and Framer-motion,{' '}
+              <Link
+                to="https://github.com/MA-Ahmad/myPortfolio"
+                style={{ color: linkColor[2], _hover: { color: linkColor[2] } }}
+
+              >
+                source on Github
+              </Link>
+              .
+            </MilestoneItem>
+          </Box>
+        </Box>
+        <Box zIndex={5}>
+          <Heading fontSize="2xl" fontWeight="600" my={5}>
+            2021
+          </Heading>
+          <Box>
+            <MilestoneItem color={linkColor[3]} icon={FaTools}>
+              Learnt{' '}
+              <Link
+                to="https://www.typescriptlang.org"
+                style={{ color: linkColor[3], _hover: { color: linkColor[3] } }}
+              >
+                Typescript
+              </Link>{' '}
+              and{' '}
+              <Link
+                to="https://nextjs.org"
+                style={{ color: linkColor[3], _hover: { color: linkColor[3] } }}
+
+              >
+                Next.js
+              </Link>
+            </MilestoneItem>
+            <MilestoneItem color={linkColor[3]} icon={FiPackage}>
+              Published 3 posts on my portfolio website{' '}
+              <Link
+                to="https://mahmad.me/blog"
+                style={{ color: linkColor[3], _hover: { color: linkColor[3] } }}
+
+              >
+                Blog
+              </Link>
+            </MilestoneItem>
+            <MilestoneItem color={linkColor[3]} icon={FiPackage}>
+              Published or contributed to{' '}
+              <Link
+                to="https://mahmad.me/open-source"
+                style={{ color: linkColor[3], _hover: { color: linkColor[3] } }}
+
+              >
+                20+ open-source repositories
+              </Link>
+            </MilestoneItem>
+            <MilestoneItem color={linkColor[3]} icon={FiBarChart2}>
+              Collected 34k+ posts views and 1.5k+ total reactions on{' '}
+              <Link
+                to="https://dev.to/m_ahmad"
+                style={{ color: linkColor[3], _hover: { color: linkColor[3] } }}
+
+              >
+                Dev.to
+              </Link>
+            </MilestoneItem>
+            <MilestoneItem color={linkColor[3]} icon={FiHome} skipTrail>
+              Rebuilt my portfolio website with React, ChakraUI and Framer-motion,{' '}
+              <Link
+                to="https://github.com/MA-Ahmad/myPortfolio"
+                style={{ color: linkColor[3], _hover: { color: linkColor[3] } }}
+
               >
                 source on Github
               </Link>
@@ -144,7 +333,7 @@ const MilestoneItem = ({
             border={'1px solid'}
             borderColor={color}
           />
-          <Box as={icon} size={"1.20rem"} color={color} pos="absolute" left={["0.7rem", "0.875rem"]} top={["0.7rem", "0.875rem"]} />
+          <Box as={icon} size={"1.25rem"} color={color} pos="absolute" left={"0.875rem"} top={"0.875rem"} />
           {!skipTrail && <Box w="1px" flex={1} bg={color} my={1} />}
         </Flex>
         <Box pt={{ base: 1, sm: 3 }} {...boxProps}>
