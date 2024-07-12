@@ -36,8 +36,8 @@ const Sidebar = () => {
                     <VStack fontSize={['sm', 'sm', 'sm', 'md']} justifyContent={'flex-start'} alignItems={'flex-start'}>
                         <TransitionWrapper>
                             <HStack display={['flex','flex','flex','none']} mb={4} gap={2}>
-                                <Link to="https://linkedin.com/in/deependraparmar" target='_blank'><Button gap={1} background='purple.100' color={'white'} size={['xs', 'sm', 'sm', 'sm']} _hover={{ backgroundColor: 'purple.200' }}>Follow <TiPlus /></Button></Link>
-                                <Link to="https://buymeacoffee.com/deependraparmar" target='_blank'><Button gap={1} size={['xs', 'sm', 'sm', 'sm']}>Coffee <FaCoffee /></Button></Link>
+                                <Link to="https://linkedin.com/in/deependraparmar" target='_blank'><Button gap={1} background='purple.100' color={'white'} size={'sm'} _hover={{ backgroundColor: 'purple.200' }}>Follow <TiPlus /></Button></Link>
+                                <Link to="https://buymeacoffee.com/deependraparmar" target='_blank'><Button gap={1} size={'sm'}>Coffee <FaCoffee /></Button></Link>
                             </HStack>
                         </TransitionWrapper>
                         <TransitionWrapper>
