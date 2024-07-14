@@ -1,5 +1,6 @@
-import { Button, HStack, Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react'
+import { Button, Tab, TabList, TabPanel, TabPanels, Tabs } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
+import { RiArrowUpDoubleLine } from 'react-icons/ri'
 import ContentBox from '../components/ContentBox'
 import MainWrapper from '../components/MainWrapper'
 import Sidebar from '../components/Sidebar'
@@ -7,12 +8,9 @@ import About from './About'
 import Achievements from './Achievements'
 import Certifications from './Certifications'
 import CodingProfiles from './CodingProfiles'
-import Contact from './Contact'
 import Education from './Education'
-import MyPassion from './MyPassion'
 import Projects from './Projects'
 import Skills from './Skills'
-import { RiArrowUpDoubleLine } from 'react-icons/ri'
 
 
 const Home = () => {
@@ -45,8 +43,6 @@ const Home = () => {
               <Tab>Achievements</Tab>
               <Tab>Projects</Tab>
               <Tab>Coding&nbsp;Profiles</Tab>
-              <Tab>Passion</Tab>
-              <Tab>Contact</Tab>
             </TabList>
 
             <TabPanels>
@@ -76,14 +72,6 @@ const Home = () => {
 
               <TabPanel>
                 <CodingProfiles />
-              </TabPanel>
-
-              <TabPanel>
-                <MyPassion />
-              </TabPanel>
-
-              <TabPanel>
-                <Contact />
               </TabPanel>
             </TabPanels>
           </Tabs>

@@ -132,15 +132,17 @@ const Projects = () => {
       <Container maxW="7xl" mx="auto">
         <SimpleGrid columns={[1, 3]} spacing={4} mt={4}>
           {projectsList.map((project, index) => (
-            <ProjectCard
-              key={index}
-              title={project.title}
-              description={project.description}
-              cover={project.cover}
-              techStack={project.techStack}
-              url={project.url}
-              live={project.live}
-            />
+            <TransitionWrapper>
+              <ProjectCard
+                key={index}
+                title={project.title}
+                description={project.description}
+                cover={project.cover}
+                techStack={project.techStack}
+                url={project.url}
+                live={project.live}
+              />
+            </TransitionWrapper>
           ))}
         </SimpleGrid>
       </Container>
