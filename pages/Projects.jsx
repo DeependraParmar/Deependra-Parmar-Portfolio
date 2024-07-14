@@ -129,7 +129,7 @@ const Projects = () => {
 
   return (
     <TransitionWrapper>
-      <Container maxW="7xl" mx="auto">
+      <Container maxW="7xl" mx="auto" px={['0','3']}>
         <SimpleGrid columns={[1, 3]} spacing={4} mt={4}>
           {projectsList.map((project, index) => (
             <TransitionWrapper>
