@@ -4,32 +4,137 @@ import React from 'react';
 import { AiOutlineStar } from 'react-icons/ai';
 import { BsFillRecordFill } from 'react-icons/bs';
 import { FiGithub } from 'react-icons/fi';
-import coursify from "../src/assets/01_coursify.png";
 import TransitionWrapper from '../components/Transition';
+
+import coursify from "../src/assets/projects/01_coursify.png";
+import twitter from "../src/assets/projects/02_twitter.png";
+import portfolio1 from "../src/assets/projects/03_portfolio.png";
+import portfolio2 from "../src/assets/projects/04_portfolio.png";
+import cryptographix from "../src/assets/projects/05_cryptographix.png";
+import awesomeui from "../src/assets/projects/06_awesomeui.png";
+import bmdevs from "../src/assets/projects/07_bmdevs.png";
+import iphm from "../src/assets/projects/08_iphm.png";
+import wordx from "../src/assets/projects/09_wordx.png";
+import yuvaantar from "../src/assets/projects/10_yuvaantar.png";
+import todo from "../src/assets/projects/11_todo.png";
+import dashboard from "../src/assets/projects/12_admindashboard.png";
+import proton from "../src/assets/projects/13_proton.png";
+import maxcoach from "../src/assets/projects/14_maxcoach.png";
 
 const Projects = () => {
   const projectsList = [{
     title: 'Coursify: The Ultimate LMS',
     description: 'Coursify is a highly secure web-based LMS with advanced instructor verification, administrative tools, management and more.',
     cover: coursify,
-    language: 'JavaScript',
     techStack: ['ChakraUI', 'MERN', 'Redux', 'JWT'],
     url: 'https://github.com/DeependraParmar/Coursify-UI.git',
     live: 'https://coursify-frontend.vercel.app/',
-    stargazers_count: 7,
-    forks_count: 25
+
   },
   {
-    title: 'Notebook',
-    description: 'This is a notebook app which will help you to crate notes for your daily work.',
-    cover: '/assets/images/repositories/notebook_app.png',
-    language: 'Javascript',
-    techStack: ['react', 'typescript'],
-    url: 'https://github.com/MA-Ahmad/notebook',
-    live: 'https://ma-ahmad.github.io/notebook',
-    stargazers_count: 19,
-    forks_count: 8
-  }
+    title: 'Todo with Auth',
+    description: 'This is a notebook app which will help you to crate notes for your daily work with authentication.',
+    cover: todo,
+    techStack: ['HTML', 'CSS', 'JS', 'MongoDB'],
+    url: 'https://github.com/DeependraParmar/Todo-Frontend',
+    live: 'https://ultimatetodo.vercel.app/',
+  },
+  {
+    title: 'Twitter: A Social Media App',
+    description: 'This is a twitter clone with tweet, comment, follow, notification services and much more.',
+    cover: twitter,
+    techStack: ['NextJS', 'Prisma', 'Zustand', 'Mongo'],
+    url: 'https://github.com/DeependraParmar/Twitter',
+    live: 'https://twitter-dp.vercel.app',
+  },
+  {
+    title: 'Todo with Auth',
+    description: 'This is a notebook app which will help you to crate notes for your daily work with authentication.',
+    cover: todo,
+    techStack: ['HTML', 'CSS', 'JS', 'MongoDB'],
+    url: 'https://github.com/DeependraParmar/Todo-Frontend',
+    live: 'https://ultimatetodo.vercel.app/',
+  },
+  {
+    title: 'Todo with Auth',
+    description: 'This is a notebook app which will help you to crate notes for your daily work with authentication.',
+    cover: todo,
+    techStack: ['HTML', 'CSS', 'JS', 'MongoDB'],
+    url: 'https://github.com/DeependraParmar/Todo-Frontend',
+    live: 'https://ultimatetodo.vercel.app/',
+  },
+  {
+    title: 'Todo with Auth',
+    description: 'This is a notebook app which will help you to crate notes for your daily work with authentication.',
+    cover: todo,
+    techStack: ['HTML', 'CSS', 'JS', 'MongoDB'],
+    url: 'https://github.com/DeependraParmar/Todo-Frontend',
+    live: 'https://ultimatetodo.vercel.app/',
+  },
+  {
+    title: 'Todo with Auth',
+    description: 'This is a notebook app which will help you to crate notes for your daily work with authentication.',
+    cover: todo,
+    techStack: ['HTML', 'CSS', 'JS', 'MongoDB'],
+    url: 'https://github.com/DeependraParmar/Todo-Frontend',
+    live: 'https://ultimatetodo.vercel.app/',
+  },
+  {
+    title: 'Todo with Auth',
+    description: 'This is a notebook app which will help you to crate notes for your daily work with authentication.',
+    cover: todo,
+    techStack: ['HTML', 'CSS', 'JS', 'MongoDB'],
+    url: 'https://github.com/DeependraParmar/Todo-Frontend',
+    live: 'https://ultimatetodo.vercel.app/',
+  },
+  {
+    title: 'Todo with Auth',
+    description: 'This is a notebook app which will help you to crate notes for your daily work with authentication.',
+    cover: todo,
+    techStack: ['HTML', 'CSS', 'JS', 'MongoDB'],
+    url: 'https://github.com/DeependraParmar/Todo-Frontend',
+    live: 'https://ultimatetodo.vercel.app/',
+  },
+  {
+    title: 'Todo with Auth',
+    description: 'This is a notebook app which will help you to crate notes for your daily work with authentication.',
+    cover: todo,
+    techStack: ['HTML', 'CSS', 'JS', 'MongoDB'],
+    url: 'https://github.com/DeependraParmar/Todo-Frontend',
+    live: 'https://ultimatetodo.vercel.app/',
+  },
+  {
+    title: 'Todo with Auth',
+    description: 'This is a notebook app which will help you to crate notes for your daily work with authentication.',
+    cover: todo,
+    techStack: ['HTML', 'CSS', 'JS', 'MongoDB'],
+    url: 'https://github.com/DeependraParmar/Todo-Frontend',
+    live: 'https://ultimatetodo.vercel.app/',
+  },
+  {
+    title: 'Todo with Auth',
+    description: 'This is a notebook app which will help you to crate notes for your daily work with authentication.',
+    cover: todo,
+    techStack: ['HTML', 'CSS', 'JS', 'MongoDB'],
+    url: 'https://github.com/DeependraParmar/Todo-Frontend',
+    live: 'https://ultimatetodo.vercel.app/',
+  },
+  {
+    title: 'Todo with Auth',
+    description: 'This is a notebook app which will help you to crate notes for your daily work with authentication.',
+    cover: todo,
+    techStack: ['HTML', 'CSS', 'JS', 'MongoDB'],
+    url: 'https://github.com/DeependraParmar/Todo-Frontend',
+    live: 'https://ultimatetodo.vercel.app/',
+  },
+  {
+    title: 'Todo with Auth',
+    description: 'This is a notebook app which will help you to crate notes for your daily work with authentication.',
+    cover: todo,
+    techStack: ['HTML', 'CSS', 'JS', 'MongoDB'],
+    url: 'https://github.com/DeependraParmar/Todo-Frontend',
+    live: 'https://ultimatetodo.vercel.app/',
+  },
   ];
 
   return (
@@ -44,7 +149,6 @@ const Projects = () => {
               cover={project.cover}
               techStack={project.techStack}
               url={project.url}
-              stargazers_count={project.stargazers_count}
               live={project.live}
             />
           ))}
@@ -73,7 +177,7 @@ const LazyImage = (props) => {
 };
 
 const ProjectCard = (props) => {
-  const { title,description, cover, techStack, url, stargazers_count, live } = props;
+  const { title,description, cover, techStack, url, live } = props;
 
   const handleLinkClick = (e, link) => {
     window.open(link);
@@ -120,12 +224,6 @@ const ProjectCard = (props) => {
                 </Text>
               </HStack>
             </Tooltip>
-            <Flex color={'white'} alignItems="center">
-              <Icon as={AiOutlineStar} boxSize="0.9em" mt="1px" />
-              <Box as="span" ml="1" fontSize="sm">
-                {stargazers_count}
-              </Box>
-            </Flex>
           </Flex>
           <Text color={'gray'} fontSize={'xs'} noOfLines={2}>{description}</Text>
           <Flex justifyContent="space-between" width="100%">
