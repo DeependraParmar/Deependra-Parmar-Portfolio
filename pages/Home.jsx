@@ -34,7 +34,7 @@ const Home = () => {
       <MainWrapper>
         <Sidebar />
         <ContentBox>
-          <Tabs variant={'soft-rounded'}>
+          <Tabs variant={'soft-rounded'} isFitted>
             <TabList>
               <Tab>About</Tab>
               <Tab>Education</Tab>

@@ -159,7 +159,7 @@ const LineWithDot = () => {
           backgroundSize="cover"
           backgroundRepeat="no-repeat"
           backgroundPosition="center center"
-          bg={'blue.400'}
+          bg={'white'}
           borderRadius="100px"
           backgroundImage="none"
           opacity={1}
