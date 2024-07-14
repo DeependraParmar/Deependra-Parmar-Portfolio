@@ -30,20 +30,44 @@ const Projects = () => {
 
   },
   {
-    title: 'Todo with Auth',
-    description: 'This is a notebook app which will help you to crate notes for your daily work with authentication.',
-    cover: todo,
-    techStack: ['HTML', 'CSS', 'JS', 'MongoDB'],
-    url: 'https://github.com/DeependraParmar/Todo-Frontend',
-    live: 'https://ultimatetodo.vercel.app/',
-  },
-  {
     title: 'Twitter: A Social Media App',
     description: 'This is a twitter clone with tweet, comment, follow, notification services and much more.',
     cover: twitter,
     techStack: ['NextJS', 'Prisma', 'Zustand', 'Mongo'],
     url: 'https://github.com/DeependraParmar/Twitter',
     live: 'https://twitter-dp.vercel.app',
+  },
+  {
+    title: 'EzyCart: An E-commerce Application',
+    description: "This is an e-commerce application's Admin dashboard with product listings, charts and more.",
+    cover: dashboard,
+    techStack: ['ReactJS', 'TypeScript', 'MERN'],
+    url: 'https://github.com/DeependraParmar/EzyCart-UI',
+    live: 'https://ezy-cart.vercel.app/admin/dashboard',
+  },
+  {
+    title: 'CryptoGraphix',
+    description: 'A Crypto-application which shows all the coins, exchanges, their real-time prices in multi-currency formats..',
+    cover: cryptographix,
+    techStack: ['ReactJS', 'Axios', 'CoinGecko'],
+    url: 'https://github.com/DeependraParmar/CryptoGraphix',
+    live: 'https://cryptographix.vercel.app',
+  },
+  {
+    title: 'Yuvaantar',
+    description: 'Yuvaantar is a tech-based club at CSIT@AITR. This is the website for the clubs showing events and registration links.',
+    cover: yuvaantar,
+    techStack: ['ReactJS', 'SaSS'],
+    url: 'https://github.com/DeependraParmar/Yuvaantar',
+    live: 'https://yuvaantar.vercel.app/',
+  },
+  {
+    title: 'Todo with Auth',
+    description: 'This is a notebook app which will help you to crate notes for your daily work with authentication.',
+    cover: todo,
+    techStack: ['HTML', 'CSS', 'JS', 'MongoDB'],
+    url: 'https://github.com/DeependraParmar/Todo-Frontend',
+    live: 'https://ultimatetodo.vercel.app/',
   },
   {
     title: 'Deependra Parmar 2.0',
@@ -60,14 +84,6 @@ const Projects = () => {
     techStack: ['ReactJS', 'SaSS'],
     url: 'https://github.com/DeependraParmar/DeependraParmarPortfolio',
     live: 'https://deependra-parmar.vercel.app/',
-  },
-  {
-    title: 'CryptoGraphix',
-    description: 'A Crypto-application which shows all the coins, exchanges, their real-time prices in multi-currency formats..',
-    cover: cryptographix,
-    techStack: ['ReactJS', 'Axios', 'CoinGecko'],
-    url: 'https://github.com/DeependraParmar/CryptoGraphix',
-    live: 'https://cryptographix.vercel.app',
   },
   {
     title: 'AwesomeUI',
@@ -94,6 +110,14 @@ const Projects = () => {
     live: 'https://learnlogics.github.io',
   },
   {
+    title: 'MaxCoach Landing Page',
+    description: 'This is the landing page for MaxCoach. com which I created when I was learning HTML & CSS',
+    cover: maxcoach,
+    techStack: ['HTML', 'CSS'],
+    url: 'https://github.com/DeependraParmar/MaxCoach-Internship',
+    live: 'https://maxcoach-internship.vercel.app/',
+  },
+  {
     title: 'WordX',
     description: 'WordX is a powerful text-based tranformation tool which allows multiple utility with extension based file downloading.',
     cover: wordx,
@@ -101,30 +125,6 @@ const Projects = () => {
     url: 'https://github.com/DeependraParmar/WordX',
     live: 'https://wordxbydp.netlify.app/',
   },
-  {
-    title: 'Yuvaantar',
-    description: 'Yuvaantar is a tech-based club at CSIT@AITR. This is the website for the clubs showing events and registration links.',
-    cover: yuvaantar,
-    techStack: ['ReactJS', 'SaSS'],
-    url: 'https://github.com/DeependraParmar/Yuvaantar',
-    live: 'https://yuvaantar.vercel.app/',
-  },
-  {
-    title: 'EzyCart: An E-commerce Application',
-    description: "This is an e-commerce application's Admin dashboard with product listings, charts and more.",
-    cover: dashboard,
-    techStack: ['ReactJS', 'TypeScript', 'MERN'],
-    url: 'https://github.com/DeependraParmar/EzyCart-UI',
-    live: 'https://ezy-cart.vercel.app/admin/dashboard',
-  },
-  {
-    title: 'MaxCoach Landing Page',
-    description: 'This is the landing page for MaxCoach. com which I created when I was learning HTML & CSS',
-    cover: maxcoach,
-    techStack: ['HTML', 'CSS'],
-    url: 'https://github.com/DeependraParmar/MaxCoach-Internship',
-    live: 'https://maxcoach-internship.vercel.app/',
-  }
   ];
 
   return (
