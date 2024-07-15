@@ -18,9 +18,20 @@ import yuvaantar from "../src/assets/projects/10_yuvaantar.png";
 import todo from "../src/assets/projects/11_todo.png";
 import dashboard from "../src/assets/projects/12_admindashboard.png";
 import maxcoach from "../src/assets/projects/14_maxcoach.png";
+import taskilio from "../src/assets/projects/15_taskilio.png";
 
 const Projects = () => {
-  const projectsList = [{
+  const projectsList = [
+    {
+    title: 'Taskilio: A SaSS Application',
+    description: 'Taskilio is an organizational sass application with task management, team management, and more features.',
+    cover: taskilio,
+    techStack: ['NextJS', 'Prisma', 'Stripe', 'Mongo'],
+    url: 'https://github.com/DeependraParmar/Taskilio.git',
+    live: 'https://taskilio.vercel.app/',
+
+  },
+    {
     title: 'Coursify: The Ultimate LMS',
     description: 'Coursify is a highly secure web-based LMS with advanced instructor verification, administrative tools, management and more.',
     cover: coursify,
