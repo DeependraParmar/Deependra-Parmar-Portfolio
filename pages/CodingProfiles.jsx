@@ -64,7 +64,7 @@ const Coding_Profiles = () => {
             <VStack gap={4} alignItems={'flex-start'} bg={'#25282c'} w={['95%','94%']} borderRadius={'10px'} p={4}>
               <Text fontSize={['xl','2xl']} textAlign={'center'} w={'full'} fontFamily={'Sofia'} textDecoration={'underline'} color={'orange'}>Coding Summary</Text>
               <UnorderedList fontSize={['sm','md']}>
-                <ListItem>Consistently coding from last <span className="highlight">{Math.floor((new Date() - new Date('2023-11-28')) / (1000 * 60 * 60 * 24) + 1)
+                <ListItem>Consistently coding from last <span className="highlight">{Math.floor((new Date() - new Date('2023-11-25')) / (1000 * 60 * 60 * 24))
                 }🔥</span> days. <span className="highlight-code"><Link target='_blank' to={'https://github.com/DeependraParmar'}>View here</Link></span> </ListItem>
                 <ListItem>Solved <span className="highlight">320+</span> Coding Interview DSA Problems across all the platforms.</ListItem>
                 <ListItem>Solved <span className="highlight">780+</span> problems on <span className="highlight-code"><Link target='_blank' to={'https://www.naukri.com/code360/profile/deependraparmar'}>Coding Ninjas</Link></span> with about <span className="highlight">500+</span> Interview MCQ's and <span className="highlight">200+</span> Interview Coding Questions.</ListItem>
