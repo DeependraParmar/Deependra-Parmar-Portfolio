@@ -1,6 +1,6 @@
 import { Button, Tab, TabList, TabPanel, TabPanels, Tabs, useToast } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
-import { RiArrowUpDoubleLine, RiEmotionLaughFill } from 'react-icons/ri';
+import { RiArrowUpDoubleLine } from 'react-icons/ri';
 import ContentBox from '../components/ContentBox';
 import MainWrapper from '../components/MainWrapper';
 import Sidebar from '../components/Sidebar';
