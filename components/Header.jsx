@@ -1,10 +1,11 @@
-import { Button, HStack, Heading, IconButton, Menu, MenuButton, MenuItem, MenuList, Text } from '@chakra-ui/react'
+import { Button, HStack, Heading, IconButton, Image, Menu, MenuButton, MenuItem, MenuList, Text } from '@chakra-ui/react'
 import React from 'react'
 import { IoDiamondOutline, IoDocument } from 'react-icons/io5'
 import { PiHamburgerFill } from 'react-icons/pi'
 import { TbBriefcaseFilled } from 'react-icons/tb'
 import { Link } from 'react-router-dom'
 import TransitionWrapper from './Transition'
+import resume from "../src/assets/resume/resume.pdf"
 
 const Header = () => {
     return (
@@ -18,7 +19,7 @@ const Header = () => {
                 </Link>
                 <HStack display={['none','flex','flex','flex']} gap={2}>
                     <Link to="mailto:deependraparmar1@gmail.com" target='_blank'><Button background='purple.100' color={'white'} size={['xs', 'sm', 'sm', 'sm']} _hover={{ backgroundColor: 'purple.200' }} gap={2}>Hire Me <TbBriefcaseFilled /></Button></Link>
-                    <Link to="/"><Button size={['xs', 'sm', 'sm', 'sm']} gap={1}>Resume <IoDocument /></Button></Link>
+                    <Text as={'a'} href={resume} type='image/pdf'><Button size={['xs', 'sm', 'sm', 'sm']} gap={1}>Resume <IoDocument /></Button></Text>
                 </HStack>
 
                 <HStack display={['flex','none','none','none']}>
@@ -45,12 +46,12 @@ const Header = () => {
                                 </Link>
                             </MenuItem>
                             <MenuItem width={'full'} borderRadius={'md'} _hover={{ bg: '#5141ff', color: 'white' }} bg={'#25282c'}>
-                                <Link style={{width: '100%'}} to="mailto:deependraparmar1@gmail.com" target='_blank'>
+                                <Text as={'a'} style={{width: '100%'}} href={resume} type='image/pdf' target='_blank'>
                                     <HStack>
                                         <Text fontSize={'sm'}>Resume</Text>
                                         <IoDocument />
                                     </HStack>
-                                </Link>
+                                </Text>
                             </MenuItem>
                         </MenuList>
                     </Menu>
