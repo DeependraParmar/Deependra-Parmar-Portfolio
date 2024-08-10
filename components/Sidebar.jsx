@@ -1,8 +1,8 @@
 import { Button, HStack, Heading, Image, Stack, Text, VStack } from '@chakra-ui/react';
 import React from 'react';
-import { AiOutlineMail } from "react-icons/ai";
+import { AiOutlineLinkedin, AiOutlineMail } from "react-icons/ai";
 import { BsGlobe } from "react-icons/bs";
-import { FaCoffee, FaLinkedinIn } from "react-icons/fa";
+import { FaCoffee } from "react-icons/fa";
 import { FiGithub, FiTwitter } from "react-icons/fi";
 import { IoLocationOutline } from "react-icons/io5";
 import { PiGraduationCapLight, PiYoutubeLogo } from "react-icons/pi";
@@ -61,7 +61,7 @@ const Sidebar = () => {
                         </TransitionWrapper>
 
                         <TransitionWrapper>
-                            <HStack className='sidebar_links' gap={2} justifyContent={'flex-start'} color={'gray'}><FaLinkedinIn size={18} /><Link to={'https://www.linkedin.com/in/deependraparmar'} target='_blank' >deependraparmar</Link></HStack>
+                            <HStack className='sidebar_links' gap={2} justifyContent={'flex-start'} color={'gray'}><AiOutlineLinkedin size={18} /><Link to={'https://www.linkedin.com/in/deependraparmar'} target='_blank' >deependraparmar</Link></HStack>
                         </TransitionWrapper>
 
                         <TransitionWrapper>
