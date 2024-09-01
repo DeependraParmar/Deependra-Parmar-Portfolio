@@ -1,21 +1,21 @@
-import { Button, Tab, TabList, TabPanel, TabPanels, Tabs, useToast } from '@chakra-ui/react';
+import { Button, HStack, VStack, useToast } from '@chakra-ui/react';
 import React, { useEffect, useState } from 'react';
 import { RiArrowUpDoubleLine } from 'react-icons/ri';
+import { useLocation, useNavigate } from 'react-router-dom';
 import ContentBox from '../components/ContentBox';
 import MainWrapper from '../components/MainWrapper';
 import Sidebar from '../components/Sidebar';
-import About from './About';
-import Achievements from './Achievements';
-import Certifications from './Certifications';
-import CodingProfiles from './CodingProfiles';
-import Education from './Education';
-import Projects from './Projects';
-import Skills from './Skills';
+import { tabs } from '../data';
 
 
 const Home = () => {
   const [show, setShow] = useState(false);
   const toast = useToast();
+
+  const { search } = useLocation();
+  const query = new URLSearchParams(search);
+  const queryParam = query.get("tab");
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -52,52 +52,31 @@ const Home = () => {
     });
   }, []);
 
+  const changeTab = (name) => {
+      navigate(name);
+  }
+
   return (
     <>
       <MainWrapper>
         <Sidebar />
         <ContentBox>
-          <Tabs variant={'soft-rounded'}>
-            <TabList>
-              <Tab>About</Tab>
-              <Tab>Education</Tab>
-              <Tab>Skills</Tab>
-              <Tab>Certifications</Tab>
-              <Tab>Achievements</Tab>
-              <Tab>Projects</Tab>
-              <Tab>Coding&nbsp;Profiles</Tab>
-            </TabList>
-
-            <TabPanels>
-              <TabPanel>
-                <About />
-              </TabPanel>
-
-              <TabPanel>
-                <Education />
-              </TabPanel>
-
-              <TabPanel>
-                <Skills />
-              </TabPanel>
-
-              <TabPanel>
-                <Certifications />
-              </TabPanel>
-
-              <TabPanel>
-                <Achievements />
-              </TabPanel>
-
-              <TabPanel>
-                <Projects />
-              </TabPanel>
-
-              <TabPanel>
-                <CodingProfiles />
-              </TabPanel>
-            </TabPanels>
-          </Tabs>
+          <VStack>
+            <HStack alignItems={'center'} justifyContent={'flex-start'} w={'full'}>
+              {
+                tabs.map((tab, index) => {
+                  return <>
+                    {
+                      tab.url.split('=')[1] === queryParam ? <Button size={'sm'} variant={''} rounded={'md'} backgroundColor={'#5d5dff'} key={index} onClick={() => changeTab(tab.url)}>{tab.name}</Button> : <Button size={'sm'} variant={''} rounded={'md'} _hover={{ background: 'gray' }} key={index} onClick={() => changeTab(tab.url)}>{tab.name}</Button>
+                    }
+                  </>
+                })
+              }
+            </HStack>
+            {
+              
+            }
+          </VStack>
         </ContentBox>
       </MainWrapper>
 
