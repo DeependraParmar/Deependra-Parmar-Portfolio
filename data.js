@@ -1,30 +1,30 @@
 export const tabs = [
     {
         name: "About",
-        url: "?tab=about"
+        url: "about",
     },
     {
         name: "Education",
-        url: "?tab=education"
+        url: "education",
     },
     {
         name: "Skills",
-        url: "?tab=skills"
+        url: "skills",
     },
     {
         name: "Certifications",
-        url: "?tab=certifications"
+        url: "certifications",
     },
     {
         name: "Achievements",
-        url: "?tab=achievements"
+        url: "achievements",
     },
     {
         name: "Projects",
-        url: "?tab=projects"
+        url: "projects",
     },
     {
         name: "Coding Profiles",
-        url: "?tab=coding-profiles"
+        url: "coding-profiles",
     }
 ]

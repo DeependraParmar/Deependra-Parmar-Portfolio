@@ -1,4 +1,4 @@
-import { Image, ListItem, Text, UnorderedList, VStack } from '@chakra-ui/react'
+import { ListItem, Text, UnorderedList, VStack } from '@chakra-ui/react'
 import React from 'react'
 import TransitionWrapper from '../components/Transition'
 
