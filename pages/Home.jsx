@@ -78,10 +78,10 @@ const Home = () => {
         <Sidebar />
         <ContentBox>
           <VStack alignItems={'flex-start'} justifyContent={'flex-start'}>
-            <HStack gap={2} overflowX={'auto'} flexWrap={'wrap'} p={1} alignItems={'center'} justifyContent={'flex-start'} w={'full'}>
+            <HStack gap={2} overflowX={'auto'} p={1} alignItems={'center'} justifyContent={'flex-start'} w={'full'}>
               {
                 tabs.map((tab, index) => {
-                  return <Button background={tab.url === queryParam && '#5d5dff'} size={'sm'} variant={''} rounded={'md'} _hover={tab.url !== queryParam && { background: 'gray' }} key={index} onClick={() => changeTab(tab.url)}>{tab.name}</Button>
+                  return <Box onClick={() => changeTab(tab.url)}><Button background={tab.url === queryParam && '#5d5dff'} size={'sm'} variant={''} rounded={'md'} _hover={tab.url !== queryParam && { background: 'gray' }} key={index} >{tab.name}</Button></Box>
                 })
               }
             </HStack>
