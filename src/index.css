@@ -70,6 +70,12 @@ body,
     background: #5f5dff;
 }
 
+.tabmenu::-webkit-scrollbar-thumb{
+    background: #b6b6b6;
+    width: 2px !important;
+    height: 2px !important;
+}
+
 .highlight{
     font-weight: 600;
     text-decoration: underline; 
