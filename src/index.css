@@ -70,10 +70,12 @@ body,
     background: #5f5dff;
 }
 
+.tabmenu::-webkit-scrollbar{
+    height: 4px !important;
+}
 .tabmenu::-webkit-scrollbar-thumb{
-    background: #b6b6b6;
-    width: 2px !important;
-    height: 2px !important;
+    background: #25282c;
+    border-radius: 10px;
 }
 
 .highlight{
