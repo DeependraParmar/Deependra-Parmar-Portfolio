@@ -66,10 +66,10 @@ const Coding_Profiles = () => {
               <UnorderedList fontSize={['sm','md']}>
                 <ListItem>Consistently coding from last <span className="highlight">{Math.floor((new Date() - new Date('2023-11-25')) / (1000 * 60 * 60 * 24))
                 }🔥</span> days. <span className="highlight-code"><Link target='_blank' to={'https://github.com/DeependraParmar'}>View here</Link></span> </ListItem>
-                <ListItem>Solved <span className="highlight">320+</span> Coding Interview DSA Problems across all the platforms.</ListItem>
-                <ListItem>Solved <span className="highlight">780+</span> problems on <span className="highlight-code"><Link target='_blank' to={'https://www.naukri.com/code360/profile/deependraparmar'}>Coding Ninjas</Link></span> with about <span className="highlight">500+</span> Interview MCQ's and <span className="highlight">200+</span> Interview Coding Questions.</ListItem>
-                <ListItem>Solved <span className="highlight">80+</span> problems on <span className="highlight-code"><Link target='_blank' to={'https://leetcode.com/deependraparmar'}>LeetCode</Link></span>.</ListItem>
-                <ListItem>Solved <span className="highlight">60+</span> problems on <span className="highlight-code"><Link target='_blank' to={'https://geeksforgeeks.com/user/deependraparmar1'}>GeeksforGeeks</Link></span>.</ListItem>
+                <ListItem>Solved <span className="highlight">400+</span> Coding Interview DSA Problems across all the platforms.</ListItem>
+                <ListItem>Solved <span className="highlight">780+</span> problems on <span className="highlight-code"><Link target='_blank' to={'https://www.naukri.com/code360/profile/deependraparmar'}>Coding Ninjas</Link></span> with about <span className="highlight">500+</span> Interview MCQ's and <span className="highlight">230+</span> Interview Coding Questions.</ListItem>
+                <ListItem>Solved <span className="highlight">100+</span> problems on <span className="highlight-code"><Link target='_blank' to={'https://leetcode.com/deependraparmar'}>LeetCode</Link></span>.</ListItem>
+                <ListItem>Solved <span className="highlight">70+</span> problems on <span className="highlight-code"><Link target='_blank' to={'https://geeksforgeeks.com/user/deependraparmar1'}>GeeksforGeeks</Link></span>.</ListItem>
                 <ListItem>Solved <span className="highlight">30+</span> beginner-level problems on <span className="highlight-code"><Link target='_blank' to={'https://www.hackerrank.com/profile/deependraparmar1'}>HackerRank</Link></span>. I also own 5⭐ C++ and 3⭐ Problem Solving Badge on HackerRank.</ListItem>
               </UnorderedList>
             </VStack>
