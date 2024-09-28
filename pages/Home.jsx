@@ -7,6 +7,7 @@ import MainWrapper from '../components/MainWrapper';
 import Sidebar from '../components/Sidebar';
 import { tabs } from '../data';
 
+
 import About from "./About";
 import Education from "./Education";
 import Skills from "./Skills";

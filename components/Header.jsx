@@ -1,13 +1,36 @@
-import { Button, HStack, Heading, IconButton, Image, Menu, MenuButton, MenuItem, MenuList, Text } from '@chakra-ui/react'
-import React from 'react'
+import { Box, Button, HStack, Heading, IconButton, Image, Menu, MenuButton, MenuItem, MenuList, Text } from '@chakra-ui/react'
+import React, { useEffect, useState } from 'react'
 import { IoDiamondOutline, IoDocument } from 'react-icons/io5'
 import { PiHamburgerFill } from 'react-icons/pi'
 import { TbBriefcaseFilled } from 'react-icons/tb'
 import { Link } from 'react-router-dom'
 import TransitionWrapper from './Transition'
+
+import { FcLikePlaceholder } from "react-icons/fc";
+import { FcLike } from "react-icons/fc";
+
 import resume from "../src/assets/resume/resume.pdf"
+import axios from 'axios'
 
 const Header = () => {
+    const [isLiked, setIsLiked] = useState(true);
+    const [likes, setLikes] = useState(0);
+
+    useEffect(() => {
+        const postLike = async () => {
+            try {
+                const response = await axios.get("http://localhost:4000/like");
+                console.log(response.data);
+                setLikes(response.data.likes);
+                
+            } catch (error) {
+                console.error("Error posting like:", error);
+            }
+        };
+
+        postLike();
+    }, []);
+
     return (
         <TransitionWrapper>
             <HStack p={3} justifyContent={'space-between'} alignItems={'center'} borderBottom={'1px solid rgb(54, 54, 54)'}>
@@ -18,11 +41,24 @@ const Header = () => {
                     </HStack>
                 </Link>
                 <HStack display={['none','flex','flex','flex']} gap={2}>
+                    <Button onClick={() => setIsLiked(like => !like)} variant={''} size={['xs', 'sm', 'sm', 'sm']} >
+                        <HStack alignItems={'center'} justifyContent={'center'}>
+                            <Box>
+                                {
+                                    isLiked ? <FcLike size={'18'} /> : <FcLikePlaceholder size={'18'} />
+                                }
+                            </Box>
+                            <Text>{likes}</Text>
+                        </HStack>
+                    </Button>
                     <Link to="mailto:deependraparmar1@gmail.com" target='_blank'><Button background='purple.100' color={'white'} size={['xs', 'sm', 'sm', 'sm']} _hover={{ backgroundColor: 'purple.200' }} gap={2}>Hire Me <TbBriefcaseFilled /></Button></Link>
                     <Text as={'a'} href={resume} type='image/pdf'><Button size={['xs', 'sm', 'sm', 'sm']} gap={1}>Resume <IoDocument /></Button></Text>
                 </HStack>
 
                 <HStack display={['flex','none','none','none']}>
+                    <Button variant={''} size={['xs', 'sm', 'sm', 'sm']} >{
+                        isLiked ? <FcLike size={'18'} /> : <FcLikePlaceholder size={'18'} />
+                    }</Button>
                     <Menu>
                         <MenuButton
                             right={2}
