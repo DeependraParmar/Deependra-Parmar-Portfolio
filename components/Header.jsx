@@ -20,7 +20,7 @@ const Header = () => {
     useEffect(() => {
         const checkLike = async () => {
             try {
-                const response = await axios.get("http://localhost:4000/is-liked");
+                const response = await axios.get(`${process.env.SERVER_URL}/is-liked`);
                 console.log(response.data);
                 setIsLiked(response.data.isLiked);
             } catch (error) {
@@ -33,7 +33,7 @@ const Header = () => {
 
     const postLike = async () => {
         try {
-            const response = await axios.get("http://localhost:4000/like");
+            const response = await axios.get(`${process.env.SERVER_URL}/like`);
             setLikes(response.data.likes);
             setIsLiked(true);
             toast.success(response.data.message, {
@@ -55,7 +55,7 @@ const Header = () => {
 
     const postDislike = async () => {
         try {
-            const response = await axios.get("http://localhost:4000/dislike");
+            const response = await axios.get(`${process.env.SERVER_URL}/dislike`);
             setLikes(response.data.likes);
             setIsLiked(false);
             toast.error(response.data.message, {

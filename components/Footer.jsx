@@ -8,7 +8,7 @@ const Footer = () => {
   useEffect(() =>  {
     const pageViews = async () => {
       try {
-        const response = await axios.get("http://localhost:4000/add-request");
+        const response = await axios.get(`${process.env.SERVER_URL}/add-request`);
         console.log(response.data);
         setViews(response.data.views);
 
