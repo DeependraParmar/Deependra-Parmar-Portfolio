@@ -29,13 +29,13 @@ const Header = () => {
         };
 
         checkLike();
-    }, []);
+    }, [isLiked]);
 
     const postLike = async () => {
         try {
             const response = await axios.get(`https://portfolio-server-jyzo.onrender.com/like`);
-            setLikes(response.data.likes);
             setIsLiked(true);
+            setLikes(response.data.likes);
             toast.success(response.data.message, {
                 position: "top-right",
                 autoClose: 5000,
@@ -56,8 +56,8 @@ const Header = () => {
     const postDislike = async () => {
         try {
             const response = await axios.get(`https://portfolio-server-jyzo.onrender.com/dislike`);
-            setLikes(response.data.likes);
             setIsLiked(false);
+            setLikes(response.data.likes);
             toast.error(response.data.message, {
                 position: "top-right",
                 autoClose: 5000,
