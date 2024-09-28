@@ -22,7 +22,7 @@ const Header = () => {
             try {
                 const response = await axios.get("http://localhost:4000/is-liked");
                 console.log(response.data);
-                setIsLiked(response.data.isLiked);                
+                setIsLiked(response.data.isLiked);
             } catch (error) {
                 console.error("Error posting like:", error);
             }
@@ -52,7 +52,7 @@ const Header = () => {
             console.error("Error posting like:", error);
         }
     };
-    
+
     const postDislike = async () => {
         try {
             const response = await axios.get("http://localhost:4000/dislike");
@@ -76,7 +76,7 @@ const Header = () => {
     };
 
     const handleLikeAndDislike = (isLiked) => {
-        if(isLiked)
+        if (isLiked)
             postDislike();
         else
             postLike();
@@ -92,7 +92,7 @@ const Header = () => {
                         <Heading fontFamily={'Sofia'} fontSize={['1rem', 'md', 'xl', 'xl']}>Deependra Parmar</Heading>
                     </HStack>
                 </Link>
-                <HStack display={['none','flex','flex','flex']} gap={2}>
+                <HStack display={['none', 'flex', 'flex', 'flex']} gap={2}>
                     <Button onClick={() => handleLikeAndDislike(isLiked)} variant={''} size={['xs', 'sm', 'sm', 'sm']} >
                         <HStack alignItems={'center'} justifyContent={'center'}>
                             <Box>
@@ -107,10 +107,17 @@ const Header = () => {
                     <Text as={'a'} href={resume} type='image/pdf'><Button size={['xs', 'sm', 'sm', 'sm']} gap={1}>Resume <IoDocument /></Button></Text>
                 </HStack>
 
-                <HStack display={['flex','none','none','none']}>
-                    <Button variant={''} size={['xs', 'sm', 'sm', 'sm']} >{
-                        isLiked ? <FcLike size={'18'} /> : <FcLikePlaceholder size={'18'} />
-                    }</Button>
+                <HStack display={['flex', 'none', 'none', 'none']} gap={1}>
+                    <Button onClick={() => handleLikeAndDislike(isLiked)} variant={''} size={['xs', 'sm', 'sm', 'sm']} >
+                        <HStack right={4} position={'relative'} gap={1} alignItems={'center'} justifyContent={'center'}>
+                            <Box>
+                                {
+                                    isLiked ? <FcLike size={'18'} /> : <FcLikePlaceholder size={'18'} />
+                                }
+                            </Box>
+                            <Text>{likes}</Text>
+                        </HStack>
+                    </Button>
                     <Menu>
                         <MenuButton
                             right={2}
@@ -121,20 +128,20 @@ const Header = () => {
                             variant={'ghost'}
                             bg={'#5141ff'}
                             color={'white'}
-                            _hover={{color: 'black', bg: 'white'}}
-                            _active={{color: 'black', bg: 'white'}}
+                            _hover={{ color: 'black', bg: 'white' }}
+                            _active={{ color: 'black', bg: 'white' }}
                         />
                         <MenuList bg={'#25282c'} border={'none'} >
                             <MenuItem width={'full'} borderRadius={'md'} _hover={{ bg: '#5141ff', color: 'white' }} bg={'#25282c'}>
-                                <Link style={{width: '100%'}} to="mailto:deependraparmar1@gmail.com" target='_blank'>
-                                <HStack>
-                                    <Text fontSize={'sm'}>Hire Me</Text>
-                                    <TbBriefcaseFilled />
-                                </HStack>
+                                <Link style={{ width: '100%' }} to="mailto:deependraparmar1@gmail.com" target='_blank'>
+                                    <HStack>
+                                        <Text fontSize={'sm'}>Hire Me</Text>
+                                        <TbBriefcaseFilled />
+                                    </HStack>
                                 </Link>
                             </MenuItem>
                             <MenuItem width={'full'} borderRadius={'md'} _hover={{ bg: '#5141ff', color: 'white' }} bg={'#25282c'}>
-                                <Text as={'a'} style={{width: '100%'}} href={resume} type='image/pdf' target='_blank'>
+                                <Text as={'a'} style={{ width: '100%' }} href={resume} type='image/pdf' target='_blank'>
                                     <HStack>
                                         <Text fontSize={'sm'}>Resume</Text>
                                         <IoDocument />
