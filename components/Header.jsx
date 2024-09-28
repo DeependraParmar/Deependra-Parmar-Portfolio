@@ -1,4 +1,4 @@
-import { Box, Button, HStack, Heading, IconButton, Image, Menu, MenuButton, MenuItem, MenuList, Text } from '@chakra-ui/react'
+import { Box, Button, HStack, Heading, IconButton, Image, Menu, MenuButton, MenuItem, MenuList, Text, useToast } from '@chakra-ui/react'
 import React, { useEffect, useState } from 'react'
 import { IoDiamondOutline, IoDocument } from 'react-icons/io5'
 import { PiHamburgerFill } from 'react-icons/pi'
@@ -11,25 +11,77 @@ import { FcLike } from "react-icons/fc";
 
 import resume from "../src/assets/resume/resume.pdf"
 import axios from 'axios'
+import { Bounce, toast } from 'react-toastify'
 
 const Header = () => {
-    const [isLiked, setIsLiked] = useState(true);
+    const [isLiked, setIsLiked] = useState(false);
     const [likes, setLikes] = useState(0);
 
     useEffect(() => {
-        const postLike = async () => {
+        const checkLike = async () => {
             try {
-                const response = await axios.get("http://localhost:4000/like");
+                const response = await axios.get("http://localhost:4000/is-liked");
                 console.log(response.data);
-                setLikes(response.data.likes);
-                
+                setIsLiked(response.data.isLiked);                
             } catch (error) {
                 console.error("Error posting like:", error);
             }
         };
 
-        postLike();
+        checkLike();
     }, []);
+
+    const postLike = async () => {
+        try {
+            const response = await axios.get("http://localhost:4000/like");
+            setLikes(response.data.likes);
+            setIsLiked(true);
+            toast.success(response.data.message, {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                transition: Bounce,
+            });
+
+        } catch (error) {
+            console.error("Error posting like:", error);
+        }
+    };
+    
+    const postDislike = async () => {
+        try {
+            const response = await axios.get("http://localhost:4000/dislike");
+            setLikes(response.data.likes);
+            setIsLiked(false);
+            toast.error(response.data.message, {
+                position: "top-right",
+                autoClose: 5000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: true,
+                draggable: true,
+                progress: undefined,
+                theme: "dark",
+                transition: Bounce,
+            });
+
+        } catch (error) {
+            console.error("Error posting dislike:", error);
+        }
+    };
+
+    const handleLikeAndDislike = (isLiked) => {
+        if(isLiked)
+            postDislike();
+        else
+            postLike();
+    }
+
 
     return (
         <TransitionWrapper>
@@ -41,7 +93,7 @@ const Header = () => {
                     </HStack>
                 </Link>
                 <HStack display={['none','flex','flex','flex']} gap={2}>
-                    <Button onClick={() => setIsLiked(like => !like)} variant={''} size={['xs', 'sm', 'sm', 'sm']} >
+                    <Button onClick={() => handleLikeAndDislike(isLiked)} variant={''} size={['xs', 'sm', 'sm', 'sm']} >
                         <HStack alignItems={'center'} justifyContent={'center'}>
                             <Box>
                                 {

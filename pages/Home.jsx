@@ -1,20 +1,22 @@
-import { Box, Button, Divider, HStack, VStack, useToast } from '@chakra-ui/react';
-import React, { useEffect, useRef, useState } from 'react';
+import { Box, Button, Divider, HStack, VStack } from '@chakra-ui/react';
+import React, { useEffect, useState } from 'react';
 import { RiArrowUpDoubleLine } from 'react-icons/ri';
 import { useLocation, useNavigate } from 'react-router-dom';
+import 'react-toastify/dist/ReactToastify.css';
 import ContentBox from '../components/ContentBox';
 import MainWrapper from '../components/MainWrapper';
 import Sidebar from '../components/Sidebar';
 import { tabs } from '../data';
 
 
+import { Bounce, ToastContainer, toast } from 'react-toastify';
 import About from "./About";
-import Education from "./Education";
-import Skills from "./Skills";
-import Certifications from "./Certifications";
 import Achievements from "./Achievements";
-import Projects from "./Projects";
+import Certifications from "./Certifications";
 import CodingProfiles from "./CodingProfiles";
+import Education from "./Education";
+import Projects from "./Projects";
+import Skills from "./Skills";
 
 
 const Home = () => {
@@ -26,7 +28,6 @@ const Home = () => {
 
   const [show, setShow] = useState(false);
   const [queryParam, setQueryParam] = useState(parameter === null ? "about" : parameter);
-  const toast = useToast();
   
 
   useEffect(() => {
@@ -52,14 +53,16 @@ const Home = () => {
   useEffect(() => {
     window.addEventListener('contextmenu', (e) => {
       e.preventDefault();
-      toast({
-        title: 'No right-clicks bro! 😂🙈🙅‍♂️',
-        duration: 5000,
-        variant: 'left-accent',
-        status: 'success',
-        id: 'right-click-toast',
-        position: 'top-right',
-        isClosable: true,
+      toast.warning('No right clicks bro!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        transition: Bounce,
       });
     });
   }, []);
@@ -101,6 +104,7 @@ const Home = () => {
           </VStack>
         </ContentBox>
       </MainWrapper>
+      <ToastContainer />
 
       <>
         {
