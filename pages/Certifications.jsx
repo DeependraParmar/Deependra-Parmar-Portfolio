@@ -11,6 +11,7 @@ import git from "../src/assets/certificates/git.png";
 import java from "../src/assets/certificates/java.jpg";
 import js from "../src/assets/certificates/js.jpg";
 import mern from "../src/assets/certificates/mern.png";
+import sql from "../src/assets/certificates/sql_basic.jpg"
 import postman from "../src/assets/certificates/postman.png";
 import TransitionWrapper from '../components/Transition';
 
@@ -36,6 +37,13 @@ const Certifications = () => {
       url: git,
       link: '',
       issuer: 'SimpliLearn'
+    },
+    {
+      title: 'SQL-Basic',
+      description: 'Its SQL that helps RDBMS communicate and having hands-on experience on it is a must.',
+      url: sql,
+      link: 'https://www.hackerrank.com/certificates/19776b1fa1d5',
+      issuer: 'HackerRank'
     },
     {
       title: 'Alibaba Certified Developer',
