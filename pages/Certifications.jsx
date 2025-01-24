@@ -11,7 +11,8 @@ import git from "../src/assets/certificates/git.png";
 import java from "../src/assets/certificates/java.jpg";
 import js from "../src/assets/certificates/js.jpg";
 import mern from "../src/assets/certificates/mern.png";
-import sql from "../src/assets/certificates/sql_basic.jpg"
+import sql_basic from "../src/assets/certificates/sql_basic.jpg"
+import sql_intermediate from "../src/assets/certificates/sql_intermediate.png"
 import postman from "../src/assets/certificates/postman.png";
 import TransitionWrapper from '../components/Transition';
 
@@ -32,18 +33,25 @@ const Certifications = () => {
       issuer: '100xDevs'
     },
     {
+      title: 'SQL-Intermediate',
+      description: 'Proved my understanding of Complex Joins, Subqueries and more advanced SQL concepts.',
+      url: sql_intermediate,
+      link: 'https://www.hackerrank.com/certificates/0a01dd6478a4',
+      issuer: 'HackerRank'
+    },
+    {
+      title: 'SQL-Basic',
+      description: 'Showed up my understanding with basic DDL, DML and other queries for better SQL Understanding',
+      url: sql_basic,
+      link: 'https://www.hackerrank.com/certificates/19776b1fa1d5',
+      issuer: 'HackerRank'
+    },
+    {
       title: 'Git Training',
       description: 'Git is a must have tool for every developer. I learned a lot about git and github.',
       url: git,
       link: '',
       issuer: 'SimpliLearn'
-    },
-    {
-      title: 'SQL-Basic',
-      description: 'Its SQL that helps RDBMS communicate and having hands-on experience on it is a must.',
-      url: sql,
-      link: 'https://www.hackerrank.com/certificates/19776b1fa1d5',
-      issuer: 'HackerRank'
     },
     {
       title: 'Alibaba Certified Developer',
